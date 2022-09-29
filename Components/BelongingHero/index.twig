@@ -1,0 +1,73 @@
+<section class="vityl-belong-hero">
+    <div class="container">
+        <div class="vityl-belong-hero__mask-row">
+            <div class="vityl-belong-hero__mask-left-col">
+                <div class="vityl-belong-hero__mask-1"></div>
+            </div>
+            <div class="vityl-belong-hero__mask-right-col">
+                <div class="vityl-belong-hero__mask-2"></div>
+            </div>
+        </div>
+        <div class="vityl-belong-hero__row">
+            <div class="vityl-belong-hero__col--right">
+                <div class="vityl-belong-hero__shape">
+                    <div class="vityl-belong-hero__img-mask vityl-belong-hero__img-mask--left">
+                        <img
+                            class="lazyload"
+                            src="{{ placeholderImage(image_1.width / 2, image_1.height / 2) }}"
+                            data-src="{{ image_1.src|resizeDynamic(image_1.width / 2) }}"
+                            data-srcset="{{ image_1.src|resizeDynamic(image_1.width / 2) }} 1x, {{ image_1.src|resizeDynamic(image_1.width) }} 2x"
+                            data-sizes="auto"
+                            alt="{{ image_1.alt|e }}"
+                        />
+                    </div>
+                    <div class="vityl-belong-hero__circle--coral"></div>
+                    <div id="vityl-belong-hero__circle--middle"></div>
+                    <div class="vityl-belong-hero__circle--teal"></div>
+                    <div class="vityl-belong-hero__img-mask vityl-belong-hero__img-mask--right">
+                        <img
+                            class="lazyload"
+                            src="{{ placeholderImage(image_2.width / 2, image_2.height / 2) }}"
+                            data-src="{{ image_2.src|resizeDynamic(image_2.width / 2) }}"
+                            data-srcset="{{ image_2.src|resizeDynamic(image_2.width / 2) }} 1x, {{ image_2.src|resizeDynamic(image_2.width) }} 2x"
+                            data-sizes="auto"
+                            alt="{{ image_2.alt|e }}"
+                        />
+                    </div>
+                </div>
+            </div>
+            <div class="vityl-belong-hero__col--left">
+                <div class="pre-title">{{ pre_title }}</div>
+                <div class="vityl-belong-hero__content">
+                    <h1 class="vityl-h1">{{ title }}</h1>
+                    <div class="vityl-p">
+                        <p>{{ content }}</p>
+                    </div>
+                </div>
+                <div class="vityl-belong-hero__link">
+                    {% if gravity_form_shortcode %}
+                        <button id="js-belonging-hero-btn" class="btn btn--black">{{ link.title }}</button>
+                    {% else %}
+                        <a class="btn btn--black" href="{{ link.url }}">{{ link.title }}</a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+    {# <div class="vityl-belong-hero__next-btn">
+        {% include 'Assets/scroll-down.svg' %}
+    </div> #}
+</section>
+<div id="js-vityl-belonging-hero-popup-wrapper" class="vityl-waitlist-popup-wrapper hide">
+    <div id="js-vityl-belonging-hero-popup" class="vityl-waitlist-popup">
+        <div id="js-vityl-belonging-hero-popup__close-btn" class="vityl-waitlist-popup__close-btn">
+            <span></span>
+        </div>
+        <div class="vityl-waitlist-popup__inner">
+            <h4 class="vityl-h4">{{ link.title }}</h4>
+            <div class="vityl-waitlist-popup__form">
+                {{ gravity_form_shortcode|shortcodes }}
+            </div>
+        </div>
+    </div>
+</div>

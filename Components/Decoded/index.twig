@@ -1,0 +1,60 @@
+<section class="vityl-decoded">
+    <div class="container">
+        <div class="vityl-decoded__circle-row">
+            <div class="vityl-decoded__circle-col">
+                <div class="vityl-decoded__circle-inner">
+                    <div class="vityl-decoded__circle-shape-1"></div>
+                </div>
+            </div>
+            <div class="vityl-decoded__circle-col">
+                <div class="vityl-decoded__circle-inner">
+                    <div class="vityl-decoded__circle-shape-2"></div>
+                </div>
+            </div>
+        </div>
+        <div class="vityl-decoded__title">
+            <div class="pre-title">{{ pre_title }}</div>
+            <h2 class="vityl-h2">{{ title }}</h2>
+        </div>
+        <div class="vityl-decoded__row vityl-decoded__row--reverse">
+            <div class="vityl-decoded__content-col">
+                <div class="vityl-decoded__content-1">
+                    <h3>{{ sub_title_1 }}</h3>
+                    <div class="vityl-p">
+                        <p>{{ sub_content_1 }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="vityl-decoded__image-col">
+                <img
+                    class="lazyload"
+                    src="{{ placeholderImage(image_1.width / 2, image_1.height / 2) }}"
+                    data-src="{{ image_1.src|resizeDynamic(image_1.width / 2) }}"
+                    data-srcset="{{ image_1.src|resizeDynamic(image_1.width / 2) }} 1x, {{ image_1.src|resizeDynamic(image_1.width) }} 2x"
+                    data-sizes="auto"
+                    alt="{{ image_1.alt|e }}"
+                />
+            </div>
+        </div>
+        <div class="vityl-decoded__row">
+            <div class="vityl-decoded__content-col">
+                <div class="vityl-decoded__content-2">
+                    <h3>{{ sub_title_2 }}</h3>
+                    <div class="vityl-p">
+                        <p>{{ sub_content_2 }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="vityl-decoded__image-col">
+                <img
+                    class="lazyload"
+                    src="{{ placeholderImage(image_2.width / 2, image_2.height / 2) }}"
+                    data-src="{{ image_2.src|resizeDynamic(image_2.width / 2) }}"
+                    data-srcset="{{ image_2.src|resizeDynamic(image_2.width / 2) }} 1x, {{ image_2.src|resizeDynamic(image_2.width) }} 2x"
+                    data-sizes="auto"
+                    alt="{{ image_2.alt|e }}"
+                />
+            </div>
+        </div>
+    </div>
+</section>

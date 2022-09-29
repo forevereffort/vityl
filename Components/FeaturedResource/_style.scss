@@ -1,0 +1,105 @@
+.vityl-featured-resource {
+  background-color: rgba($color-coral, 0.1);
+  padding: 150px 0 80px;
+}
+
+.vityl-featured-resource__title {
+  .vityl-h3 {
+    margin-top: 13px;
+  }
+}
+
+.vityl-featured-resource__cat-row {
+  padding: 40px 0 0;
+  position: relative;
+  
+  &::before {
+    background-color: rgba($color-coral, 0.1);
+    border-radius: 175px 175px 0 0;
+    box-shadow: 375px 0 rgba($color-coral, 0.1), 750px 0 rgba($color-coral, 0.1), 1125px 0 rgba($color-coral, 0.1), -375px 0 rgba($color-coral, 0.1), -750px 0 rgba($color-coral, 0.1), -1125px 0 rgba($color-coral, 0.1);
+    content: '';
+    height: 175px;
+    left: 50%;
+    position: absolute;
+    top: -90px;
+    transform: translateX(-50%);
+    width: 375px;
+    z-index: -1;
+  }
+}
+
+.vityl-featured-resource__link {
+  margin-top: 80px;
+}
+
+.vityl-featured-resource__pre-title {
+  padding: 75px 0 0;
+}
+
+.vityl-featured-resource__row {
+  margin: 30px 0 0;
+}
+
+@media(min-width: $breakpoint-mobile-start) {
+  .vityl-featured-resource {
+    padding: 280px 0 80px;
+  }
+
+  .vityl-featured-resource__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -35px;
+  }
+
+  .vityl-featured-resource__col {
+    padding: 50px 35px;
+    width: 33.33333%;
+  }
+
+  .vityl-featured-resource__link {
+    margin-top: 40px;
+    text-align: center;
+  }
+
+  .vityl-featured-resource__cat-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -14px;
+    padding: 13px 0 79px;
+
+    &::before {
+      border-radius: 360px 360px 0 0;
+      bottom: 0;
+      box-shadow: 720px 0 rgba($color-coral, 0.1), 1440px 0 rgba($color-coral, 0.1), 2160px 0 rgba($color-coral, 0.1), -720px 0 rgba($color-coral, 0.1), -1440px 0 rgba($color-coral, 0.1), -2160px 0 rgba($color-coral, 0.1);
+      height: 360px;
+      top: auto;
+      width: 720px;
+    }
+  }
+
+  .vityl-featured-resource__cat-item {
+    padding: 14px;
+  }
+
+  .vityl-featured-resource__pre-title {
+    padding: 80px 0 0;
+  }
+}
+
+@media(max-width: $breakpoint-mobile-start) {
+  .vityl-featured-resource__col+.vityl-featured-resource__col {
+    margin: 44px 0 0;
+  }
+
+  .vityl-featured-resource__cat-item+.vityl-featured-resource__cat-item {
+    margin-top: 8px;
+  }
+
+  .vityl-featured-resource__cat-row {
+    text-align: center;
+  }
+  
+  .vityl-featured-resource__link {
+    text-align: center;
+  }
+}

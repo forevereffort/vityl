@@ -1,0 +1,34 @@
+<section class="vityl-video-cta vityl-video-cta--{{ background_color }} {% if has_dot_animation %}vityl-video-cta--has-animation{% endif %}">
+    <div class="container">
+        <div class="vityl-video-cta__row">
+            <div class="vityl-video-cta__left-col">
+                <h2 class="vityl-h2">{{ title }}</h2>
+                <div class="vityl-p">
+                    <p>{{ content }}</p>
+                </div>
+            </div>
+            <div class="vityl-video-cta__right-col {% if has_dot_animation %}vityl-video-cta__right-col--has-animation{% endif %}">
+                <div class="vityl-video-cta__video-btn">
+                    <img
+                        class="lazyload"
+                        src="{{ placeholderImage(530, 300) }}"
+                        data-src="{{ play_button_image.src|resizeDynamic(530, 300) }}"
+                        data-srcset="{{ play_button_image.src|resizeDynamic(530, 300) }} 1x, {{ play_button_image.src|resizeDynamic(1060, 600) }} 2x"
+                        data-sizes="auto"
+                        alt="{{ play_button_image.alt|e }}"
+                    />
+                    <span>{{ play_button_title }}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div id="js-vityl-video-cta-popup-wrapper" class="hide">
+    <div id="js-vityl-video-cta-popup__close-btn">
+        <span></span>
+    </div>
+    <div class="vityl-video-cta-popup-container">
+        <div class="vityl-video-loader"></div>
+        {{ video }}
+    </div>
+</div>

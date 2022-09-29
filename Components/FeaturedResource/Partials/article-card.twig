@@ -1,0 +1,43 @@
+<div class="vityl-post-card">
+    <div class="vityl-post-card__img">
+        <a href="{{ blog.link }}">
+            <img
+                class="lazyload"
+                src="{{ placeholderImage(330, 320) }}"
+                data-src="{{ blog.thumbnail.src|resizeDynamic(330, 320) }}"
+                data-srcset="{{ blog.thumbnail.src|resizeDynamic(330, 320) }} 1x, {{ blog.thumbnail.src|resizeDynamic(660, 640) }} 2x"
+                data-sizes="auto"
+                alt="{{ blog.thumbnail.alt|e }}"
+            />
+        </a>
+    </div>
+    {# <div class="vityl-post-card__date">{{ blog.date|date('F jS Y') }}</div> #}
+    {# <div class="vityl-post-card__share-row">
+        <div class="vityl-post-card__share-label-col">Share Via</div>
+        <div class="vityl-post-card__share-icon-col">
+            <a
+                href="#"
+                onClick="javascript:window.open('http://www.facebook.com/sharer.php?u={{blog.link}}','Facebook','width=600,height=500'); return false;"
+            ><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M20 10C20 4.47715 15.5229 0 10 0C4.47715 0 0 4.47715 0 10C0 14.9912 3.65684 19.1283 8.4375 19.8785V12.8906H5.89844V10H8.4375V7.79688C8.4375 5.29063 9.93047 3.90625 12.2146 3.90625C13.3084 3.90625 14.4531 4.10156 14.4531 4.10156V6.5625H13.1922C11.95 6.5625 11.5625 7.3334 11.5625 8.125V10H14.3359L13.8926 12.8906H11.5625V19.8785C16.3432 19.1283 20 14.9912 20 10Z" fill="#000"/></svg></a>
+        </div>
+        <div class="vityl-post-card__share-icon-col">
+            <a
+                href="#"
+                onClick="javascript:window.open('https://www.linkedin.com/sharing/share-offsite/?url={{blog.link}}','LinkedIn','width=600,height=500'); return false;"
+            ><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 0C4.47708 0 0 4.47708 0 10C0 15.5229 4.47708 20 10 20C15.5229 20 20 15.5229 20 10C20 4.47708 15.5229 0 10 0ZM7.55208 14.1448H5.52708V7.62812H7.55208V14.1448ZM6.52708 6.82812C5.8875 6.82812 5.47396 6.375 5.47396 5.81458C5.47396 5.24271 5.9 4.80312 6.55312 4.80312C7.20625 4.80312 7.60625 5.24271 7.61875 5.81458C7.61875 6.375 7.20625 6.82812 6.52708 6.82812ZM14.9479 14.1448H12.9229V10.5333C12.9229 9.69271 12.6292 9.12187 11.8969 9.12187C11.3375 9.12187 11.0052 9.50833 10.8583 9.88021C10.8042 10.0125 10.7906 10.2 10.7906 10.3865V14.1437H8.76458V9.70625C8.76458 8.89271 8.73854 8.2125 8.71146 7.62708H10.4708L10.5635 8.53229H10.6042C10.8708 8.10729 11.524 7.48021 12.6167 7.48021C13.949 7.48021 14.9479 8.37292 14.9479 10.2917V14.1448Z" fill="#000"/></svg></a>
+        </div>
+        <div class="vityl-post-card__share-icon-col">
+            <a
+                href="#"
+                onClick="javascript:window.open('https://twitter.com/share?url={{blog.link}}','Twitter','width=600,height=500'); return false;"
+            ><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 0C4.47768 0 0 4.47768 0 10C0 15.5223 4.47768 20 10 20C15.5223 20 20 15.5223 20 10C20 4.47768 15.5223 0 10 0ZM14.8058 7.53795C14.8125 7.64286 14.8125 7.75223 14.8125 7.85938C14.8125 11.1362 12.317 14.9107 7.7567 14.9107C6.35045 14.9107 5.04688 14.5022 3.94866 13.7991C4.14955 13.8214 4.34152 13.8304 4.54688 13.8304C5.70759 13.8304 6.77455 13.4375 7.625 12.7723C6.53571 12.75 5.62054 12.0357 5.30804 11.0536C5.68973 11.1094 6.03348 11.1094 6.42634 11.0089C5.86546 10.895 5.36133 10.5904 4.99959 10.1468C4.63785 9.70331 4.44082 9.14823 4.44196 8.57589V8.54464C4.77009 8.72991 5.15625 8.84375 5.56027 8.85938C5.22063 8.63302 4.94209 8.32636 4.74936 7.96658C4.55662 7.60681 4.45563 7.20503 4.45536 6.79688C4.45536 6.33482 4.57589 5.91295 4.79241 5.54688C5.41496 6.31325 6.19181 6.94005 7.07247 7.38653C7.95312 7.83301 8.91788 8.08918 9.90402 8.13839C9.55357 6.45313 10.8125 5.08929 12.3259 5.08929C13.0402 5.08929 13.683 5.38839 14.1362 5.87054C14.6964 5.76562 15.2321 5.5558 15.7098 5.27455C15.5246 5.84821 15.1362 6.33259 14.6205 6.63839C15.1205 6.58482 15.6027 6.44643 16.0491 6.25223C15.7121 6.74777 15.2902 7.1875 14.8058 7.53795Z" fill="#000"/></svg></a>
+        </div>
+    </div> #}
+    <div class="vityl-post-card__content">
+        <h3>{{ blog.title }}</h3>
+        <p>{{ blog.post_excerpt }}</p>
+    </div>
+    <div class="vityl-post-card__link">
+        <a href="{{ blog.link }}">READ ARTICLE</a>
+    </div>
+</div>

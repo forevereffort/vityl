@@ -1,0 +1,56 @@
+<section {% if section_id %}id="{{section_id}}"{% endif %} class="vityl-work">
+    <div class="container">
+        <div class="pre-title">{{ pre_title }}</div>
+        <div class="vityl-work__content-row">
+            <div class="vityl-work__content-left-col">
+                <h2 class="vityl-h2">{{ title }}</h2>
+            </div>
+            <div class="vityl-work__content-right-col">
+                <div class="vityl-p">
+                    <p>{{ content }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="vityl-work__tab-name-row desktop-show">
+            {% for index, item in list %}
+                <div class="vityl-work__tab-name-col {% if index == 0 %}active{% endif %}" data-index="{{ index }}">{{ item.tab_name }}</div>
+            {% endfor %}
+        </div>
+        <div class="vityl-work__tab-row">
+            <div class="vityl-work__tab-right-col">
+                {% for index, item in list %}
+                    <div class="vityl-work__tab-video {% if index == 0 %}active{% endif %}" data-index="{{ index }}">
+                         <video width="100%" autoplay="true" playsinline="" muted="muted" loop="loop">
+                            <source src="{{ item.tab_video.url }}">
+                            Your browser does not support the video tag.
+                        </video>
+                        {# <div id="vityl-work__tab-video-{{ index }}" class="vityl-work__tab-video-inner"></div>   #}
+                    </div>
+                {% endfor %}
+                <div class="vityl-work__tab-right-nav-row">
+                    <div class="vityl-work__tab-right-nav-btn--prev">
+                        <svg width="15" height="25" viewBox="0 0 15 25" fill="none"><path d="M12.6066 23.2134L2.00003 12.6068L12.6066 2.00018" stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <div class="vityl-work__tab-right-nav-btn--next">
+                        <svg width="14" height="25" viewBox="0 0 14 25" fill="none"><path d="M1.6066 2L12.2132 12.6066L1.6066 23.2132" stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                </div>
+            </div>
+            <div class="vityl-work__tab-left-col">
+                <div class="vityl-work__tab-name-row mobile-show">
+                    {% for index, item in list %}
+                        <div class="vityl-work__tab-name-col {% if index == 0 %}active{% endif %}" data-index="{{ index }}">{{ item.tab_name }}</div>
+                    {% endfor %}
+                </div>
+                {% for index, item in list %}
+                    <div class="vityl-work__tab-content {% if index == 0 %}active{% endif %}" data-index="{{ index }}">
+                        <h3>{{ item.tab_title }}</h3>
+                        <div class="vityl-p">
+                            <p>{{ item.tab_content }}</p>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>

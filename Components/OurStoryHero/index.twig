@@ -1,0 +1,61 @@
+<section class="vityl-our-story-hero">
+    <div class="container">
+        <div class="vityl-our-story-hero__mask-row">
+            <div class="vityl-our-story-hero__mask-left-col">
+                <div class="vityl-our-story-hero__mask-1"></div>
+            </div>
+            <div class="vityl-our-story-hero__mask-right-col">
+                <div class="vityl-our-story-hero__mask-2"></div>
+            </div>
+        </div>
+        <div class="vityl-our-story-hero__row">
+            <div class="vityl-our-story-hero__right-col">
+                <div class="vityl-our-story-hero__shape">
+                    <div class="vityl-our-story-hero__circle--mint"></div>
+                    <div class="vityl-our-story-hero__img-mask vityl-our-story-hero__img-mask--bottom">
+                        <img
+                            class="lazyload"
+                            src="{{ placeholderImage(image_1.width / 2, image_1.height / 2) }}"
+                            data-src="{{ image_1.src|resizeDynamic(image_1.width / 2) }}"
+                            data-srcset="{{ image_1.src|resizeDynamic(image_1.width / 2) }} 1x, {{ image_1.src|resizeDynamic(image_1.width) }} 2x"
+                            data-sizes="auto"
+                            alt="{{ image_1.alt|e }}"
+                        />
+                    </div>
+                    <div id="vityl-our-story-hero__circle--middle"></div>
+                    <div class="vityl-our-story-hero__img-mask vityl-our-story-hero__img-mask--top">
+                        <img
+                            class="lazyload"
+                            src="{{ placeholderImage(image_2.width / 2, image_2.height / 2) }}"
+                            data-src="{{ image_2.src|resizeDynamic(image_2.width / 2) }}"
+                            data-srcset="{{ image_2.src|resizeDynamic(image_2.width / 2) }} 1x, {{ image_2.src|resizeDynamic(image_2.width) }} 2x"
+                            data-sizes="auto"
+                            alt="{{ image_2.alt|e }}"
+                        />
+                    </div>
+                    <div class="vityl-our-story-hero__circle--coral"></div>
+                </div>
+            </div>
+            <div class="vityl-our-story-hero__left-col">
+                <div class="vityl-our-story-hero__content">
+                    <h1 class="vityl-h1">
+                        <div class="vityl-our-story-hero__fade-in">
+                            <span>Support</span>
+                            <span>Happiness</span>
+                            <span>Fulfillment</span>
+                            <span>Understanding</span>
+                            <span>Collaboration</span>&nbsp;
+                        </div>
+                        <div>is Vityl.</div>
+                    </h1>
+                    <div class="vityl-p">
+                        {{ content|apply_filters('the_content') }}
+                    </div>
+                </div>
+                <div class="vityl-our-story-hero__link">
+                    <a class="btn btn--black" href="{{ link.url }}">{{ link.title }}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

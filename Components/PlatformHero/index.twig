@@ -1,0 +1,41 @@
+<section class="vityl-platform-hero">
+    <div class="container">
+        <div class="vityl-platform-hero__mask-row">
+            <div class="vityl-platform-hero__mask-left-col">
+                <div class="vityl-platform-hero__mask-1"></div>
+            </div>
+            <div class="vityl-platform-hero__mask-right-col">
+                <div class="vityl-platform-hero__mask-2"></div>
+            </div>
+        </div>
+        <div class="vityl-platform-hero__row">
+            <div class="vityl-platform-hero__right-col">
+                <div class="vityl-platform-hero__img">
+                    <img
+                        class="lazyload"
+                        src="{{ placeholderImage(image.width / 2, image.height / 2) }}"
+                        data-src="{{ image.src|resizeDynamic(image.width / 2) }}"
+                        data-srcset="{{ image.src|resizeDynamic(image.width / 2) }} 1x, {{ image.src|resizeDynamic(image.width) }} 2x"
+                        data-sizes="auto"
+                        alt="{{ image.alt|e }}"
+                    />
+                </div>
+            </div>
+            <div class="vityl-platform-hero__left-col">
+                <div class="pre-title">{{ pre_title }}</div>
+                <div class="vityl-platform-hero__content">
+                    <h1 class="vityl-h1">{{ title }}</h1>
+                    <div class="vityl-p">
+                        <p>{{ content }}</p>
+                    </div>
+                </div>
+                <div class="vityl-platform-hero__link">
+                    <a class="btn btn--coral" href="{{ link.url }}">{{ link.title }}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {# <div class="vityl-platform-hero__next-btn">
+        {% include 'Assets/scroll-down.svg' %}
+    </div> #}
+</section>

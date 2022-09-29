@@ -1,0 +1,111 @@
+.vityl-action-cta {
+  background-color: rgba($color-blue, 0.1);
+  overflow: hidden;
+  padding: 50px 0;
+}
+
+.vityl-action-cta__left-col {
+  .vityl-p {
+    margin-top: 6px;
+  }
+}
+
+@media(max-width: $breakpoint-mobile-start) {
+  .vityl-action-cta {
+    position: relative;
+    text-align: center;
+    
+    &::after {
+      animation-duration: 4s;
+      animation-iteration-count: infinite;
+      animation-name: vitylActionCtaRightColMobileAnimation;
+      background-color: #fab3a3;
+      border-radius: 50%;
+      content: '';
+      height: 250px;
+      left: 50%;
+      position: absolute;
+      top: 100%;
+      transform: translateX(-50%);
+      width: 250px;
+      z-index: 1;
+    }
+
+    .container {
+      position: relative;
+      z-index: 2;
+    }
+  }
+
+  .vityl-action-cta__right-col {
+    margin-top: 41px;
+  }
+}
+
+@media(min-width: $breakpoint-mobile-start) {
+  .vityl-action-cta {
+    padding: 117px 0;
+  }
+
+  .vityl-action-cta__row {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .vityl-action-cta__left-col {
+    max-width: 710px;
+    padding-right: 100px;
+    position: relative;
+    z-index: 2;
+
+    .vityl-p {
+      margin-top: 20px;
+    }
+  }
+
+  .vityl-action-cta__right-col {
+    align-items: center;
+    display: flex;
+    margin-right: 95px;
+    position: relative;
+    
+    &::after {
+      animation-duration: 4s;
+      animation-iteration-count: infinite;
+      animation-name: vitylActionCtaRightColAnimation;
+      background-color: #fab3a3;
+      border-radius: 50%;
+      content: '';
+      height: 350px;
+      left: 50%;
+      position: absolute;
+      top: 280px;
+      transform: translateX(-50%);
+      width: 350px;
+      z-index: 1;
+    }
+
+    a,
+    button {
+      position: relative;
+      z-index: 2;
+    }
+  }
+}
+
+@keyframes vitylActionCtaRightColAnimation {
+  from {top: 280px;}
+  to {top: -480px;}
+}
+
+@keyframes vitylActionCtaRightColMobileAnimation {
+  from {top: 100%;}
+  to {top: -250px;}
+}
+
+@media(min-width: $breakpoint-mobile-start) and (max-width: 1200px) {
+  .vityl-action-cta__left-col {
+    max-width: 550px;
+    padding-right: 50px;
+  }
+}

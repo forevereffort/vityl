@@ -1,0 +1,39 @@
+<section class="vityl-closeup">
+    <div class="container">
+        <div class="pre-title">{{ pre_title }}</div>
+        <div class="vityl-closeup__row">
+            <div class="vityl-closeup__left-col">
+                <h2 class="vityl-h2">{{ title }}</h2>
+                <div class="vityl-closeup__link desktop-show">
+                    <a class="btn btn--black" href="{{ link.url }}">{{ link.title }}</a>
+                </div>
+            </div>
+            <div class="vityl-closeup__right-col">
+                <div class="vityl-p">
+                    <p>{{ content }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="vityl-closeup__img">
+            {# <img
+                class="lazyload"
+                src="{{ placeholderImage(image.width / 2, image.height / 2) }}"
+                data-src="{{ image.src|resizeDynamic(image.width / 2) }}"
+                data-srcset="{{ image.src|resizeDynamic(image.width / 2) }} 1x, {{ image.src|resizeDynamic(image.width) }} 2x"
+                data-sizes="auto"
+                alt="{{ image.alt|e }}"
+            /> #}
+            <img
+                class="lazyload"
+                src="{{ placeholderImage(1130, image.height / image.width * 1130) }}"
+                data-src="{{ image.src|resizeDynamic(1130) }}"
+                data-srcset="{{ image.src|resizeDynamic(1130) }} 1x, {{ image.src|resizeDynamic(2260) }} 2x"
+                data-sizes="auto"
+                alt="{{ image.alt|e }}"
+            />
+        </div>
+        <div class="vityl-closeup__link mobile-show">
+            <a class="btn btn--black" href="{{ link.url }}">{{ link.title }}</a>
+        </div>
+    </div>
+</section>

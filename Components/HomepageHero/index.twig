@@ -1,0 +1,48 @@
+<section class="homepage-hero">
+    <div class="container">
+        <div class="homepage-hero__row">
+            <div class="homepage-hero__col--right">
+                <div class="homepage-hero__shape">
+                    <div class="homepage-hero__img-mask homepage-hero__img-mask--left">
+                        <img
+                            class="lazyload"
+                            src="{{ placeholderImage(image_1.width / 2, image_1.height / 2) }}"
+                            data-src="{{ image_1.src|resizeDynamic(image_1.width / 2) }}"
+                            data-srcset="{{ image_1.src|resizeDynamic(image_1.width / 2) }} 1x, {{ image_1.src|resizeDynamic(image_1.width) }} 2x"
+                            data-sizes="auto"
+                            alt="{{ image_1.alt|e }}"
+                        />
+                    </div>
+                    <div class="homepage-hero__circle--coral"></div>
+                    <div id="homepage-hero__circle--middle"></div>
+                    <div class="homepage-hero__circle--teal"></div>
+                    <div class="homepage-hero__img-mask homepage-hero__img-mask--right">
+                        <img
+                            class="lazyload"
+                            src="{{ placeholderImage(image_2.width / 2, image_2.height / 2) }}"
+                            data-src="{{ image_2.src|resizeDynamic(image_2.width / 2) }}"
+                            data-srcset="{{ image_2.src|resizeDynamic(image_2.width / 2) }} 1x, {{ image_2.src|resizeDynamic(image_2.width) }} 2x"
+                            data-sizes="auto"
+                            alt="{{ image_2.alt|e }}"
+                        />
+                    </div>
+                </div>
+            </div>
+            <div class="homepage-hero__col--left">
+                <div class="pre-title">{{ pre_title }}</div>
+                <div class="homepage-hero__content">
+                    <h1 class="vityl-h1">{{ title }}</h1>
+                    <div class="vityl-p">
+                        <p>{{ content }}</p>
+                    </div>
+                </div>
+                <div class="homepage-hero__link">
+                    <a class="btn btn--black" href="{{ link.url }}">{{ link.title }}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {# <div class="homepage-hero__next-btn">
+        {% include 'Assets/scroll-down.svg' %}
+    </div> #}
+</section>

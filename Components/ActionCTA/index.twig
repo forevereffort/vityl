@@ -1,0 +1,32 @@
+<section class="vityl-action-cta">
+    <div class="container">
+        <div class="vityl-action-cta__row">
+            <div class="vityl-action-cta__left-col">
+                <h2 class="vityl-h2">{{ title }}</h2>
+                <div class="vityl-p">
+                    <p>{{ content }}</p>
+                </div>
+            </div>
+            <div class="vityl-action-cta__right-col">
+                {% if gravity_form_shortcode %}
+                    <button id="js-action-cta-btn" class="btn btn--black">{{ link.title }}</button>  
+                {% else %}
+                    <a href="{{ link.url }}" class="btn btn--black-border">{{ link.title }}</a>                    
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
+<div id="js-vityl-action-cta-popup-wrapper" class="vityl-waitlist-popup-wrapper hide">
+    <div id="js-vityl-action-cta-popup" class="vityl-waitlist-popup">
+        <div id="js-vityl-action-cta-popup__close-btn" class="vityl-waitlist-popup__close-btn">
+            <span></span>
+        </div>
+        <div class="vityl-waitlist-popup__inner">
+            <h4 class="vityl-h4">{{ link.title }}</h4>
+            <div class="vityl-waitlist-popup__form">
+                {{ gravity_form_shortcode|shortcodes }}
+            </div>
+        </div>
+    </div>
+</div>

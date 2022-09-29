@@ -1,0 +1,33 @@
+<section class="vityl-faq">
+    <div class="container">
+        <div class="vityl-faq__mask-row">
+            <div class="vityl-faq__mask-left-col">
+                <div class="vityl-faq__mask-1"></div>
+            </div>
+            <div class="vityl-faq__mask-right-col">
+                <div class="vityl-faq__mask-2"></div>
+            </div>
+        </div>
+        <div class="vityl-faq__inner">
+            <h1 class="vityl-h1-5">{{ title }}</h1>
+            <div class="vityl-faq__cat-row">
+                <div class="vityl-faq__cat-col">
+                    <div class="vityl-faq__cat-inner active" data-index="0">All</div>
+                </div>
+                {% for index, faq in faqs %}
+                    <div class="vityl-faq__cat-col">
+                        <div class="vityl-faq__cat-inner" data-index="{{ index + 1 }}">{{ faq.category_name }}</div>
+                    </div>
+                {% endfor %}
+            </div>
+            {% for index, faq in faqs %}
+                {% for info_index, info in faq.info_list %}
+                    <div class="vityl-faq__info-inner" data-index="{{ index + 1 }}">
+                        <div class="vityl-faq__info-title {% if not ( index == 0 and info_index == 0 ) %}close{% endif %}">{{ info.question }}</div>
+                        <div class="vityl-faq__info-content" {% if not ( index == 0 and info_index == 0 ) %}style="display: none;"{% endif %}>{{ info.answer|apply_filters('the_content') }}</div>
+                    </div>
+                {% endfor %}
+            {% endfor %}
+        </div>
+    </div>
+</section>

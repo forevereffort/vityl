@@ -1,0 +1,46 @@
+<section 
+    class="
+        vityl-team
+        {% if custom_padding_top.apply %}vityl-team__custom-padding-top{% endif %}
+        {% if custom_padding_bottom.apply %}vityl-team__custom-padding-bottom{% endif %}
+    "
+    {% if custom_padding_top.apply or custom_padding_bottom.apply %}
+        style="
+            {% if custom_padding_top.apply %}
+                --vityl-team-custom-padding-top-desktop: {{ custom_padding_top.desktop }}px;
+                --vityl-team-custom-padding-top-mobile: {{ custom_padding_top.mobile }}px;
+            {% endif %}
+            {% if custom_padding_bottom.apply %}
+                --vityl-team-custom-padding-bottom-desktop: {{ custom_padding_bottom.desktop }}px;
+                --vityl-team-custom-padding-bottom-mobile: {{ custom_padding_bottom.mobile }}px;
+            {% endif %}
+        "
+    {% endif %}
+>
+    <div class="container">
+        <div class="pre-title">{{ pre_title }}</div>
+        <div class="vityl-team__row vityl-team__row--{{ column_counts }}">
+            {% for member in team_list %}
+                <div class="vityl-team__col">
+                    <div class="vityl-team__avatar">
+                        <img
+                            class="lazyload"
+                            src="{{ placeholderImage(170, 170) }}"
+                            data-src="{{ member.avatar.src|resizeDynamic(170, 170) }}"
+                            data-srcset="{{ member.avatar.src|resizeDynamic(170, 170) }} 1x, {{ member.avatar.src|resizeDynamic(340, 340) }} 2x"
+                            data-sizes="auto"
+                            alt="{{ member.avatar.alt|e }}"
+                        />
+                    </div>
+                    <div class="vityl-team__name">
+                        <h3>{{ member.name }}</h3>
+                    </div>
+                    <div class="vityl-team__role">{{ member.role }}</div>
+                    <div class="vityl-team__link">
+                        <a href="{{ member.linkedin_url }}">Linkedin</a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

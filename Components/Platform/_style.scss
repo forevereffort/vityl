@@ -1,0 +1,241 @@
+.vityl-platform {
+  background-color: rgba($color-coral, 0.25);
+  overflow: hidden;
+
+  .container {
+    padding-bottom: 52px;
+    padding-top: 64px;
+    position: relative;
+
+    &::before {
+      background-color: rgba($color-coral, 0.1);
+      border-radius: 50%;
+      content: '';
+      height: 664px;
+      left: -332px;
+      position: absolute;
+      top: -332px;
+      width: 664px;
+      z-index: -1;
+    }
+
+    &::after {
+      background-color: rgba($color-coral, 0.1);
+      border-radius: 50%;
+      bottom: -332px;
+      content: '';
+      height: 664px;
+      position: absolute;
+      right: -332px;
+      width: 664px;
+      z-index: -1;
+    }
+  }
+}
+
+.vityl-platform__content-row {
+  margin-top: 23px;
+}
+
+.vityl-platform__link {
+  margin-top: 35px;
+}
+
+.vityl-platform__list-row {
+  margin-top: 40px;
+}
+
+.vityl-platform-slider {
+  img {
+    width: 100%;
+  }
+}
+
+@media(min-width: $breakpoint-mobile-start) {
+  .vityl-platform {
+    .container {
+      padding-bottom: 153px;
+      padding-top: 126px;
+      position: relative;
+
+      &::before {
+        height: 1364px;
+        left: -839px;
+        top: -682px;
+        width: 1364px;
+      }
+
+      &::after {
+        bottom: -682px;
+        height: 1364px;
+        right: -839px;
+        width: 1364px;
+      }
+    }
+  }
+
+  .vityl-platform__content-row {
+    margin-top: 33px;
+  }
+
+  .vityl-platform__link {
+    margin-top: 27px;
+  }
+
+  .vityl-platform__list-row {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 103px;
+  }
+
+  .vityl-platform__list-left-col {
+    width: 360px;
+  }
+
+  .vityl-platform__list-right-col {
+    width: calc(100% - 360px);
+  }
+
+  .vityl-platform__list-text-item {
+    cursor: pointer;
+    opacity: 0.2;
+    padding: 0 0 0 23px;
+    position: relative;
+    transition: opacity 0.2s ease-out;
+
+    &.active,
+    &:hover {
+      opacity: 1;
+    }
+
+    &::before {
+      background-color: $color-rich-black;
+      bottom: 10px;
+      content: '';
+      left: 0;
+      position: absolute;
+      top: 7px;
+      width: 2px;
+    }
+
+    p {
+      margin: 11px 0 0;
+    }
+  }
+
+  .vityl-platform__list-text-item+.vityl-platform__list-text-item {
+    margin-top: 59px;
+  }
+
+  .vityl-platform-slider {
+    position: relative;
+
+    .swiper-container {
+      transform: translate3d(0, 0, 0);
+    }
+
+    .swiper-wrapper {
+      box-sizing: inherit;
+    }
+
+    .swiper-slide {
+      padding: 8px 40px 28px;
+    }
+
+    .swiper-slide-active {
+      img {
+        box-shadow: 10px 10px 20px -2px rgba(141, 141, 141, 0.25);
+      }
+    }
+
+    img {
+      border-radius: 20px;
+    }
+  }
+
+  .vityl-platform-slider__btn {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    user-select: none;
+    z-index: 2;
+  }
+
+  .vityl-platform-slider__btn--prev {
+    left: 0;
+  }
+
+  .vityl-platform-slider__btn--next {
+    right: 0;
+  }
+}
+
+@media(min-width: 1100px) {
+  .vityl-platform__content-row {
+    display: flex;
+  }
+
+  .vityl-platform__content-left-col {
+    width: 580px;
+  }
+
+  .vityl-platform__content-right-col {
+    padding-left: 70px;
+    width: calc(100% - 580px);
+  }
+}
+
+@media(max-width: $breakpoint-mobile-start) {
+  .vityl-platform__content-right-col {
+    margin-top: 13px;
+  }
+
+  .vityl-platform-slider__btn-row {
+    margin-top: 11px;
+    position: relative;
+  }
+
+  .vityl-platform-slider__btn {
+    svg {
+      height: auto;
+      width: 14px;
+    }
+  }
+
+  .vityl-platform__list-text-item {
+    display: none;
+    text-align: center;
+
+    &.active {
+      display: block;
+    }
+
+    .vityl-p {
+      br {
+        display: none;
+      }
+    }
+  }
+
+  .vityl-platform__list-left-col {
+    margin-top: 20px;
+    padding: 0 25px;
+  }
+
+  .vityl-platform__link {
+    text-align: center;
+  }
+
+  .vityl-platform-slider__btn--prev {
+    left: 0;
+    position: absolute;
+    top: 25px;
+  }
+
+  .vityl-platform-slider__btn--next {
+    position: absolute;
+    right: 0;
+    top: 25px;
+  }
+}

@@ -1,0 +1,12 @@
+<section class="vityl-belonging-resource">
+    <div class="container">
+        <div class="pre-title">{{ pre_title }}</div>
+        <div id="js-vityl-belonging-resource__row" class="vityl-belonging-resource__row">
+            {% include 'Partials/resource-row.twig' ignore missing with {resources: resources} only %}
+        </div>
+        <div class="vityl-belonging-resource__link">
+            <button id="js-vityl-belonging-resource__btn" class="btn btn--black">SHOW MORE RESOURCES</button>
+        </div>
+    </div>
+</section>
+<div id="js-vityl-resource-loader" class="vityl-load-spinner hide"></div>

@@ -1,0 +1,310 @@
+.vityl-sales-hero {
+  background-color: #fdfceb;
+  padding: 40px 0;
+}
+
+.vityl-sales-hero__form {
+  margin-top: 10px;
+
+  .gform_confirmation_message {
+    font-size: 20px;
+    letter-spacing: 0.05em;
+    line-height: 1.6;
+  }
+
+  .gform_submission_error {
+    color: $color-coral;
+    font-size: 16px;
+    letter-spacing: 0.05em;
+    line-height: 1.5;
+  }
+
+  .gfield_validation_message {
+    color: $color-coral;
+  }
+
+  .gfield_label {
+    display: none;
+  }
+
+  .ginput_container {
+    input {
+      background-color: transparent;
+      border: 0;
+      border-bottom: 1px solid $color-rich-black;
+      color: $color-rich-black;
+      font-size: 16px;
+      padding: 7px 0;
+      width: 100%;
+    }
+  }
+
+  .gfield+.gfield {
+    margin-top: 37px;
+  }
+  
+  .gform_footer {
+    margin-top: 38px;
+
+    input {
+      @extend %btn;
+      @extend %btn--coral;
+    }
+  }
+}
+
+.vityl-sales-hero__left {
+  h1 {
+    font-size: 32px;
+    line-height: 1.3125;
+  }
+
+  .vityl-p {
+    margin-top: 2px;
+  }
+}
+
+.vityl-sales-hero__right {
+  h1 {
+    font-size: 32px;
+    line-height: 1.3125;
+  }
+}
+
+.vityl-sales-hero__video-btn {
+  align-items: center;
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  user-select: none;
+  z-index: 2;
+
+  &:hover {
+    span {
+      background-color: $color-coral;
+      color: $color-rich-black;
+    }
+  }
+
+  &::before {
+    background-color: rgba(0, 0, 0, 0.25);
+    bottom: 0;
+    content: '';
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 2;
+  }
+
+  img {
+    height: 100%;
+    left: 0;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+  }
+
+  span {
+    background-color: $color-eggshell;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: $font-weight-bold;
+    letter-spacing: 0.05em;
+    padding: 13px 25px;
+    position: relative;
+    text-transform: uppercase;
+    transition: background-color 0.2s ease-out, color 0.2s ease-out;
+    z-index: 3;
+
+    &::before {
+      background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTMuMzMzMzQgMkwxMi42NjY3IDhMMy4zMzMzNCAxNFYyWiIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPC9zdmc+Cg==');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      content: '';
+      display: inline-block;
+      height: 16px;
+      margin-right: 10px;
+      transform: translateY(3px);
+      width: 16px;
+    }
+  }
+}
+
+#js-vityl-sales-hero-popup-wrapper {
+  backdrop-filter: blur(5px);
+  background-color: rgba($color-rich-black, 0.3);
+  bottom: 0;
+  left: 0;
+  overflow: auto;
+  padding: 45px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 9999;
+}
+
+#js-vityl-sales-hero-popup__close-btn {
+  border: 1px solid $color-rich-black;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 23px;
+  position: absolute;
+  right: 45px;
+  top: 45px;
+  transition: background-color 0.2s ease-out;
+  width: 23px;
+  z-index: 3;
+
+  &:hover {
+    background-color: $color-rich-black;
+
+    span {
+      background-color: #ecf3f3;
+      
+      &::before {
+        background-color: #ecf3f3;
+      }
+    }
+  }
+
+  span {
+    background-color: $color-rich-black;
+    height: 1px;
+    left: 4px;
+    position: absolute;
+    top: 10px;
+    transform: rotate(45deg);
+    transition: background-color 0.2s ease-out;
+    width: 13px;
+    
+    &::before {
+      background-color: $color-rich-black;
+      content: '';
+      height: 13px;
+      left: 6px;
+      position: absolute;
+      top: -6px;
+      transition: background-color 0.2s ease-out;
+      width: 1px;
+    }
+  }
+}
+
+.vityl-sales-hero-popup-container {
+  left: 50%;
+  max-height: 100%;
+  max-width: 940px;
+  overflow: hidden;
+  position: relative;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+
+  &::after {
+    content: '';
+    display: block;
+    padding-top: 56.25%;
+  }
+
+  iframe {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+}
+
+.vityl-sales-hero__row {
+  margin-top: 100px;
+}
+
+@media(max-width: $breakpoint-mobile-start) {
+  .vityl-sales-hero__video-btn {
+    height: 250px;
+    margin: 40px auto 0;
+    max-width: 530px;
+  }
+
+  .vityl-sales-hero__right {
+    margin-top: 40px;
+  }
+}
+
+@media(min-width: $breakpoint-mobile-start) {
+  .vityl-sales-hero__video-btn {
+    height: 300px;
+    margin-top: 40px;
+    width: 450px;
+  }
+
+  .vityl-sales-hero {
+    padding: 40px 0 130px;
+  }
+  
+  .vityl-sales-hero__row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 200px;
+    position: relative;
+  
+    &::before {
+      background-color: #f7f7c7;
+      border-radius: 50%;
+      box-shadow: 580px 0 #f7f7c7, -580px 0 #f7f7c7, 1160px 0 #f7f7c7, -1160px 0 #f7f7c7, 1740px 0 #f7f7c7, -1740px 0 #f7f7c7, 2320px 0 #f7f7c7, -2320px 0 #f7f7c7;
+      content: '';
+      height: 580px;
+      left: 50%;
+      position: absolute;
+      transform: translateX(-50%);
+      width: 580px;
+      z-index: 1;
+    }
+  }
+  
+  .vityl-sales-hero__left {
+    position: relative;
+    width: 450px;
+    z-index: 2;
+  
+    h1 {
+      font-size: 48px;
+      letter-spacing: 0.02em;
+      line-height: 1.5;
+    }
+  
+    .vityl-p {
+      margin-top: 15px;
+    }
+  }
+  
+  .vityl-sales-hero__right {
+    position: relative;
+    width: 410px;
+    z-index: 2;
+  
+    h2 {
+      font-size: 48px;
+      letter-spacing: 0.02em;
+      line-height: 1.5;   
+    }
+  }
+}
+
+@media(min-width: 1150px) {
+  .vityl-sales-hero__left {
+    width: 560px;
+  }
+
+  .vityl-sales-hero__video-btn {
+    width: 530px;
+  }
+}

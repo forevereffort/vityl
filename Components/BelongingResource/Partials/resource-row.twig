@@ -1,0 +1,5 @@
+{% for resource in resources %}
+    <div class="vityl-belonging-resource__col">
+        {% include 'Partials/resource-card.twig' ignore missing with {resource: resource} only %}
+    </div>
+{% endfor %}

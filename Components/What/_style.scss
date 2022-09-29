@@ -1,0 +1,93 @@
+.vityl-what {
+  background-color: #fefceb;
+  overflow: hidden;
+}
+
+.vityl-what__col {
+  .vityl-h2 {
+    display: inline-block;
+    overflow: hidden;
+    padding-bottom: 30px;
+    position: relative;
+
+    span {
+      bottom: 0;
+      left: 0;
+      position: absolute;
+    }
+  }
+}
+
+.vityl-what__row {
+  position: relative;
+  z-index: 2;
+}
+
+@media(min-width: $breakpoint-mobile-start) {
+  .vityl-what {
+    .container {
+      align-items: center;
+      display: flex;
+      height: 400px;
+      position: relative;
+
+      &::after {
+        background-color: #f9f7ca;
+        border-radius: 50%;
+        box-shadow: 400px 0 #f9f7ca, 800px 0 #f9f7ca, 1200px 0 #f9f7ca, 980px 0 #f9f7ca, 1600px 0 #f9f7ca;
+        content: '';
+        height: 400px;
+        position: absolute;
+        right: 70px;
+        top: 0;
+        width: 400px;
+        z-index: 1;
+      }
+    }
+  }
+}
+
+@media(min-width: 1200px) {
+  .vityl-what__row {
+    display: flex;
+  }
+
+  .vityl-what__col {
+    width: 50%;
+
+    .vityl-h2 {
+      padding-bottom: 37px;
+    }
+
+    .vityl-p {
+      padding-top: 8px;
+    }
+  }
+}
+
+@media(max-width: 1200px) {
+  .vityl-what__col {
+    .vityl-p {
+      margin-top: 16px;
+    }
+  }
+}
+
+@media(max-width: $breakpoint-mobile-start) {
+  .vityl-what {
+    padding: 45px 0 97px;
+    position: relative;
+
+    &::before {
+      background-color: rgba($color-lemon, 0.1);
+      border-radius: 50%;
+      bottom: 35px;
+      box-shadow: 186px 0 rgba($color-lemon, 0.1), 372px 0 rgba($color-lemon, 0.1),558px 0 rgba($color-lemon, 0.1),744px 0 rgba($color-lemon, 0.1),930px 0 rgba($color-lemon, 0.1);
+      content: '';
+      height: 186px;
+      left: 0;
+      position: absolute;
+      width: 186px;
+    }
+  }
+}

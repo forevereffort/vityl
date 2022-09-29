@@ -1,0 +1,31 @@
+{% if is_page %}
+    <div class="vityl-signup-post-page">
+        <div class="container">
+            <div class="vityl-signup__row">
+                <div class="vityl-signup__left-col">
+                    <h3>{{ title }}</h3>
+                </div>
+                <div class="vityl-signup__right-col">
+                    <div class="vityl-signup__form">
+                        {{ gravity_form_shortcode|shortcodes }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% else %}
+    <div class="vityl-signup-post">
+        <div class="container">
+            <div class="vityl-signup__row">
+                <div class="vityl-signup__left-col">
+                    <h3>{{ title }}</h3>
+                </div>
+                <div class="vityl-signup__right-col">
+                    <div class="vityl-signup__form">
+                        {{ gravity_form_shortcode|shortcodes }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endif %}

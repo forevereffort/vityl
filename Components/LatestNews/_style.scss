@@ -1,0 +1,39 @@
+.vityl-latest-news {
+  background-color: rgba($color-coral, 0.05);
+  padding: 57px 0 50px;
+}
+
+.vityl-latest-news__more-btn {
+  margin-top: 70px;
+  text-align: center;
+}
+
+.vityl-latest-news__row {
+  margin-top: 38px;
+}
+
+@media(min-width: $breakpoint-mobile-start) {
+  .vityl-latest-news {
+    padding: 126px 0 100px;
+  }
+
+  .vityl-latest-news__row {
+    display: flex;
+    margin: 49px -35px 0;
+  }
+
+  .vityl-latest-news__col {
+    padding: 0 35px;
+    width: 33.33333%;
+  }
+
+  .vityl-latest-news__more-btn {
+    margin-top: 105px;
+  }
+}
+
+@media(max-width: $breakpoint-mobile-start) {
+  .vityl-latest-news__col+.vityl-latest-news__col {
+    margin-top: 70px;
+  }
+}

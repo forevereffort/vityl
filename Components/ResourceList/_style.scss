@@ -1,0 +1,95 @@
+.vityl-resource-list {
+  background-color: rgba($color-coral, 0.1);
+  padding: 120px 0;
+}
+
+.vityl-resource-list__cat-row {
+  padding: 40px 0 0;
+  position: relative;
+  
+  &::before {
+    background-color: rgba($color-coral, 0.1);
+    border-radius: 175px 175px 0 0;
+    box-shadow: 375px 0 rgba($color-coral, 0.1), 750px 0 rgba($color-coral, 0.1), 1125px 0 rgba($color-coral, 0.1), -375px 0 rgba($color-coral, 0.1), -750px 0 rgba($color-coral, 0.1), -1125px 0 rgba($color-coral, 0.1);
+    content: '';
+    height: 175px;
+    left: 50%;
+    position: absolute;
+    top: -90px;
+    transform: translateX(-50%);
+    width: 375px;
+    z-index: -1;
+  }
+}
+
+.vityl-resource-list__title {
+  margin-top: 12px;
+}
+
+.vityl-resource-list__row {
+  margin: 120px 0 0;
+}
+
+.vityl-resource-list__cat-item {
+  .active {
+    background-color: $color-coral;
+    border-color: $color-coral;
+    color: $color-rich-black;
+  }
+}
+
+@media(min-width: $breakpoint-mobile-start) {
+  .vityl-resource-list {
+    padding: 200px 0 0;
+  }
+
+  .vityl-resource-list__title {
+    margin-top: 58px;
+  }
+
+  .vityl-resource-list__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -35px;
+    padding: 100px 0;
+  }
+
+  .vityl-resource-list__col {
+    padding: 50px 35px;
+    width: 33.33333%;
+  }
+
+  .vityl-resource-list__cat-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -14px;
+    padding: 13px 0 79px;
+
+    &::before {
+      border-radius: 360px 360px 0 0;
+      bottom: 0;
+      box-shadow: 720px 0 rgba($color-coral, 0.1), 1440px 0 rgba($color-coral, 0.1), 2160px 0 rgba($color-coral, 0.1), -720px 0 rgba($color-coral, 0.1), -1440px 0 rgba($color-coral, 0.1), -2160px 0 rgba($color-coral, 0.1);
+      height: 360px;
+      top: auto;
+      width: 720px;
+    }
+  }
+
+  .vityl-resource-list__cat-item {
+    padding: 14px;
+  }
+}
+
+@media(max-width: $breakpoint-mobile-start) {
+  .vityl-resource-list__col+.vityl-resource-list__col {
+    margin-top: 40px;
+  }
+
+  .vityl-resource-list__cat-row {
+    text-align: center;
+  }
+
+  .vityl-resource-list__cat-item+.vityl-resource-list__cat-item {
+    margin: 8px 0 0;
+  }
+}

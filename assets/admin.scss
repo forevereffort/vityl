@@ -1,0 +1,35 @@
+@import
+  'styles/variables',
+  'styles/mixins';
+
+// stylelint-disable-next-line scss/at-import-no-partial-leading-underscore, scss/at-import-partial-extension-blacklist
+@import '../Components/**/_admin.scss';
+
+.wp-block {
+  max-width: 1440px;
+  width: 100%;
+}
+
+.interface-interface-skeleton__left-sidebar,
+.interface-interface-skeleton__sidebar {
+  width: 280px;
+}
+
+.interface-complementary-area {
+  width: 100%;
+}
+
+.vityl-h1 {
+  font-size: 62px !important;
+  line-height: 1.16 !important;
+}
+
+.vityl-h2 {
+  font-size: 42px !important;
+  line-height: 1.476 !important;
+}
+
+.vityl-h3 {
+  font-size: 20px !important;
+  line-height: 1.6 !important;
+}

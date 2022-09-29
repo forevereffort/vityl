@@ -1,0 +1,49 @@
+<section class="vityl-price-hero">
+    <div class="vityl-price-hero__mask"></div>
+    <div class="container">
+        <div class="vityl-price-hero__content">
+            <h1 class="vityl-h1-5">{{ title }}</h1>
+            <div class="vityl-p">
+                <p>{{ content }}</p>
+            </div>
+        </div>
+        <div class="vityl-price-hero__plan-row">
+            {% for index, plan in plans %}
+                <div class="vityl-price-hero__plan-col {% if index == 1 %}vityl-price-hero__plan-col--active{% endif %}">
+                    <div class="vityl-price-hero__plan-inner">
+                        <div class="vityl-price-hero__plan-header-row">
+                            <div class="vityl-price-hero__plan-header-title">
+                                <h3 class="vityl-h4">{{ plan.title }}</h3>
+                                <span><svg width="16" height="9" viewBox="0 0 16 9" fill="none"><path d="M15.1421 1.07107L8.07104 8.14214L0.999977 1.07107" stroke="black" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                            </div>
+                            <div class="vityl-price-hero__plan-header-price">{{ plan.price }}</div>
+                        </div>
+                        <div class="vityl-price-hero__plan-inner-content">
+                            <div class="vityl-price-hero__feature-list">
+                                {% for feature in plan.features %}
+                                    <div class="vityl-price-hero__feature-text">{{ feature.text }}</div>
+                                {% endfor %}
+                            </div>
+                            <div class="vityl-price-hero__plan-bottom">
+                                <div class="vityl-price-hero__trial">{{ plan.trial_content|apply_filters('the_content') }}</div>
+                                <div class="vityl-price-hero__plan-btn-row">
+                                    <div class="vityl-price-hero__plan-btn-col">
+                                        <button class="vityl-price-hero__join-btn btn btn--blue">Join the Waitlist</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mobile-show">
+                                <div class="vityl-price-hero__metion-1">{{ mention_1 }}</div>
+                                <div class="vityl-price-hero__metion-2">{{ mention_2|apply_filters('the_content') }}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="desktop-show">
+            <div class="vityl-price-hero__metion-1">{{ mention_1 }}</div>
+            <div class="vityl-price-hero__metion-2">{{ mention_2|apply_filters('the_content') }}</div>
+        </div>
+    </div>
+</section>

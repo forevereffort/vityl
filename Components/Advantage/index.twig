@@ -1,0 +1,117 @@
+<section class="vityl-advantage" {% if section_id %}id="{{section_id}}"{% endif %}>
+    <div class="container">
+        <h2 class="vityl-h2">{{ title }}</h2>
+        <div class="vityl-advantage__icon-row">
+            <div class="vityl-advantage__icon-col">
+                {% if image_1 %}
+                    <div class="vityl-advantage__icon-img">
+                        <img
+                            class="lazyload"
+                            src="{{ placeholderImage(image_1.width, image_1.height) }}"
+                            data-src="{{ image_1.src|resizeDynamic(image_1.width) }}"
+                            data-srcset="{{ image_1.src|resizeDynamic(image_1.width) }} 1x"
+                            data-sizes="auto"
+                            alt="{{ image_1.alt|e }}"
+                        />
+                    </div>
+                {% else %}
+                    <div class="vityl-advantage__icon" id="vityl-advantage__icon-1"></div>                    
+                {% endif %}
+            </div>
+            <div class="vityl-advantage__icon-col">
+                {% if image_2 %}
+                    <div class="vityl-advantage__icon-img">
+                        <img
+                            class="lazyload"
+                            src="{{ placeholderImage(image_2.width, image_2.height) }}"
+                            data-src="{{ image_2.src|resizeDynamic(image_2.width) }}"
+                            data-srcset="{{ image_2.src|resizeDynamic(image_2.width) }} 1x"
+                            data-sizes="auto"
+                            alt="{{ image_2.alt|e }}"
+                        />
+                    </div>
+                {% else %}
+                    <div class="vityl-advantage__icon" id="vityl-advantage__icon-2"></div>                    
+                {% endif %}
+            </div>
+            <div class="vityl-advantage__icon-col">
+                {% if image_3 %}
+                    <div class="vityl-advantage__icon-img">
+                        <img
+                            class="lazyload"
+                            src="{{ placeholderImage(image_3.width, image_3.height) }}"
+                            data-src="{{ image_3.src|resizeDynamic(image_3.width) }}"
+                            data-srcset="{{ image_3.src|resizeDynamic(image_3.width) }} 1x"
+                            data-sizes="auto"
+                            alt="{{ image_3.alt|e }}"
+                        />
+                    </div>
+                {% else %}
+                    <div class="vityl-advantage__icon" id="vityl-advantage__icon-3"></div>                    
+                {% endif %}
+            </div>
+        </div>
+        <div class="vityl-advantage__row">
+            <div class="vityl-advantage__col">
+                <div class="vityl-advantage__inner">
+                    {% if image_1 %}
+                        <div class="vityl-advantage__icon-mobile-img">
+                            <img
+                                class="lazyload"
+                                src="{{ placeholderImage(image_1.width, image_1.height) }}"
+                                data-src="{{ image_1.src|resizeDynamic(image_1.width) }}"
+                                data-srcset="{{ image_1.src|resizeDynamic(image_1.width) }} 1x"
+                                data-sizes="auto"
+                                alt="{{ image_1.alt|e }}"
+                            />
+                        </div>
+                    {% else %}
+                        <div class="vityl-advantage__icon-mobile" id="vityl-advantage__icon-1-mobile"></div>
+                    {% endif %}
+                    <h3 class="vityl-h3">{{ sub_title_1 }}</h3>
+                    <p>{{ sub_content_1 }}</p>
+                </div>
+            </div>
+            <div class="vityl-advantage__col">
+                <div class="vityl-advantage__inner">
+                    {% if image_2 %}
+                        <div class="vityl-advantage__icon-mobile-img">
+                            <img
+                                class="lazyload"
+                                src="{{ placeholderImage(image_2.width, image_2.height) }}"
+                                data-src="{{ image_2.src|resizeDynamic(image_2.width) }}"
+                                data-srcset="{{ image_2.src|resizeDynamic(image_2.width) }} 1x"
+                                data-sizes="auto"
+                                alt="{{ image_2.alt|e }}"
+                            />
+                        </div>
+                    {% else %}
+                        <div class="vityl-advantage__icon-mobile" id="vityl-advantage__icon-2-mobile"></div>                        
+                    {% endif %}
+                    <h3 class="vityl-h3">{{ sub_title_2 }}</h3>
+                    <p>{{ sub_content_2 }}</p>
+                </div>
+            </div>
+            <div class="vityl-advantage__col">
+                <div class="vityl-advantage__inner">
+                    {% if image_3 %}
+                        <div class="vityl-advantage__icon-mobile-img">
+                            <img
+                                class="lazyload"
+                                src="{{ placeholderImage(image_3.width, image_3.height) }}"
+                                data-src="{{ image_3.src|resizeDynamic(image_3.width) }}"
+                                data-srcset="{{ image_3.src|resizeDynamic(image_3.width) }} 1x"
+                                data-sizes="auto"
+                                alt="{{ image_3.alt|e }}"
+                            />
+                        </div>
+                    {% else %}
+                        <div class="vityl-advantage__icon-mobile" id="vityl-advantage__icon-3-mobile"></div>                        
+                    {% endif %}
+                    <h3 class="vityl-h3">{{ sub_title_3 }}</h3>
+                    <p>{{ sub_content_3 }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

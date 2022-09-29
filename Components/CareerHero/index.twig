@@ -1,0 +1,45 @@
+<section class="vityl-career-hero">
+    <div class="container">
+        <div class="vityl-career-hero__row">
+            <div class="vityl-career-hero__right-col">
+                <div class="vityl-career-hero__shape">
+                    <div class="vityl-career-hero__img-mask vityl-career-hero__img-mask--top">
+                        <img
+                            class="lazyload"
+                            src="{{ placeholderImage(image_1.width / 2, image_1.height / 2) }}"
+                            data-src="{{ image_1.src|resizeDynamic(image_1.width / 2) }}"
+                            data-srcset="{{ image_1.src|resizeDynamic(image_1.width / 2) }} 1x, {{ image_1.src|resizeDynamic(image_1.width) }} 2x"
+                            data-sizes="auto"
+                            alt="{{ image_1.alt|e }}"
+                        />
+                    </div>
+                    <div class="vityl-career-hero__circle--teal"></div>
+                    <div id="vityl-career-hero__circle--middle"></div>
+                    <div class="vityl-career-hero__circle--coral"></div>
+                    <div class="vityl-career-hero__img-mask vityl-career-hero__img-mask--right">
+                        <img
+                            class="lazyload"
+                            src="{{ placeholderImage(image_2.width / 2, image_2.height / 2) }}"
+                            data-src="{{ image_2.src|resizeDynamic(image_2.width / 2) }}"
+                            data-srcset="{{ image_2.src|resizeDynamic(image_2.width / 2) }} 1x, {{ image_2.src|resizeDynamic(image_2.width) }} 2x"
+                            data-sizes="auto"
+                            alt="{{ image_2.alt|e }}"
+                        />
+                    </div>
+                </div>
+            </div>
+            <div class="vityl-career-hero__left-col">
+                <div class="vityl-career-hero__left-shape"></div>
+                <div class="vityl-career-hero__content">
+                    <h1 class="vityl-h1">{{ title }}</h1>
+                    <div class="vityl-p">
+                        <p>{{ content }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {# <div class="vityl-career-hero__next-btn">
+        {% include 'Assets/scroll-down.svg' %}
+    </div> #}
+</section>

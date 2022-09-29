@@ -1,0 +1,36 @@
+<section class="vityl-beta-article-list">
+    <div class="container">
+        <div class="vityl-beta-article-list__title">
+            <h1 class="vityl-h1-5">{{ title }}</h1>
+            <h3 class="vityl-h3">{{ sub_title }}</h3>
+        </div>
+        <div class="vityl-beta-article-list__pre-title">
+            <div class="pre-title">{{ pre_title }}</div>
+        </div>
+        <div class="vityl-beta-article-list__grid">
+            {% for item in list %}
+                <div class="vityl-post-card">
+                    <div class="vityl-post-card__img">
+                        <a href="{{ item.beta_article.link }}">
+                            <img
+                                class="lazyload"
+                                src="{{ placeholderImage(330, 320) }}"
+                                data-src="{{ item.beta_article.thumbnail.src|resizeDynamic(330, 320) }}"
+                                data-srcset="{{ item.beta_article.thumbnail.src|resizeDynamic(330, 320) }} 1x, {{ item.beta_article.thumbnail.src|resizeDynamic(660, 640) }} 2x"
+                                data-sizes="auto"
+                                alt="{{ item.beta_article.thumbnail.alt|e }}"
+                            />
+                        </a>
+                    </div>
+                    <div class="vityl-post-card__content">
+                        <h3>{{ item.beta_article.title }}</h3>
+                        <p>{{ item.beta_article.post_excerpt }}</p>
+                    </div>
+                    <div class="vityl-post-card__link">
+                        <a href="{{ item.beta_article.link }}">READ ARTICLE</a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

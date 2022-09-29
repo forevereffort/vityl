@@ -1,0 +1,25 @@
+<section class="vityl-featured-resource">
+    <div class="container">
+        <div class="vityl-featured-resource__title">
+            <h1 class="vityl-h1-5">{{ title }}</h1>
+            <h3 class="vityl-h3">{{ sub_title }}</h3>
+        </div>
+        <div class="vityl-featured-resource__cat-row">
+            {% for item in category_terms %}
+                <div class="vityl-featured-resource__cat-item">
+                    <a href="{{ item.link }}" class="btn btn--black-border btn--small">{{ item.name }}</a>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="vityl-featured-resource__pre-title">
+            <div class="pre-title">{{ pre_title }}</div>
+        </div>
+        <div id="js-vityl-featured-resource__row" class="vityl-featured-resource__row">
+            {% include 'Partials/article-row.twig' ignore missing with {blogs: blogs} only %}
+        </div>
+        <div class="vityl-featured-resource__link">
+            <button id="js-vityl-featured-resource__btn" class="btn btn--black">SHOW MORE ARTICLES</button>
+        </div>
+    </div>
+</section>
+<div id="js-vityl-article-loader" class="vityl-load-spinner hide"></div>

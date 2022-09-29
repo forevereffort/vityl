@@ -1,0 +1,170 @@
+.vityl-decoded {
+  background-color: rgba($color-eggshell, 0.1);
+  overflow: hidden;
+  
+  .container {
+    padding-bottom: 60px;
+    padding-top: 63px;
+    position: relative;
+  }
+}
+
+.vityl-decoded__content-col {
+  h3 {
+    font-size: 18px;
+    letter-spacing: 0.05em;
+    line-height: 1.33;
+  }
+
+  .vityl-p {
+    margin-top: 14px;
+  }
+}
+
+.vityl-decoded__title {
+  position: relative;
+  z-index: 1;
+
+  h2 {
+    margin: 24px 0 34px;
+  }
+}
+
+.vityl-decoded__row {
+  position: relative;
+  z-index: 2;
+}
+
+@media(min-width: $breakpoint-mobile-start) {
+  .vityl-decoded {
+    height: 1400px;
+    
+    .container {
+      padding-top: 165px;
+    }
+  }
+
+  .vityl-decoded__circle-row {
+    display: flex;
+    left: 40px;
+    margin: 0 -15px;
+    position: absolute;
+    right: 40px;
+    top: 0;
+    z-index: 1;
+  }
+
+  .vityl-decoded__circle-col {
+    padding: 15px;
+    width: 50%;
+  }
+
+  .vityl-decoded__circle-inner {
+    position: relative;
+  }
+
+  .vityl-decoded__circle-shape-1 {
+    background-color: rgba($color-lemon, 0.1);
+    border-radius: 0 0 700px 700px;
+    box-shadow: 0 700px rgba($color-lemon, 0.1);
+    height: 700px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 1400px;
+  }
+
+  .vityl-decoded__circle-shape-2 {
+    background-color: rgba($color-lemon, 0.1);
+    border-radius: 700px 700px 0 0;
+    box-shadow: 0 700px rgba($color-lemon, 0.1);
+    height: 700px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 1400px;
+  }
+
+  .vityl-decoded__title {
+    h2 {
+      margin: 33px 0 0;
+    }
+  }
+
+  .vityl-decoded__row {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 120px;
+  }
+
+  .vityl-decoded__row--reverse {
+    flex-direction: row-reverse;
+    margin-top: 60px;
+
+    .vityl-decoded__image-col {
+      padding: 0 50px 0 0;
+    }
+  }
+
+  .vityl-decoded__image-col {
+    padding: 0 0 0 50px;
+  }
+
+  .vityl-decoded__content-1 {
+    width: 460px;
+  }
+
+  .vityl-decoded__content-2 {
+    width: 490px;
+  }
+
+  .vityl-decoded__content-col {
+    h3 {
+      font-size: 32px;
+      line-height: 1.31;
+    }
+
+    .vityl-p {
+      margin-top: 30px;
+    }
+  }
+}
+
+@media(max-width: $breakpoint-mobile-start) {
+  .vityl-decoded__image-col {
+    margin-top: 36px;
+  }
+
+  .vityl-decoded__row+.vityl-decoded__row {
+    margin-top: 43px;
+  }
+
+  .vityl-decoded {
+    .container {
+      &::before {
+        background-color: rgba($color-lemon, 0.1);
+        border-radius: 0 0 240px;
+        box-shadow: 0 840px rgba($color-lemon, 0.1);
+        content: '';
+        height: 240px;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 240px;
+      }
+
+      &::after {
+        background-color: rgba($color-lemon, 0.1);
+        border-radius: 240px 0 0;
+        bottom: 0;
+        box-shadow: 0 -780px rgba($color-lemon, 0.1);
+        content: '';
+        height: 240px;
+        position: absolute;
+        right: 0;
+        width: 240px;
+      }
+    }
+  }
+}

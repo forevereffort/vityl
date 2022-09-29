@@ -1,0 +1,123 @@
+<footer class="site-footer">
+    {% if not post.hide_get_in_touch_section %}
+        <div class="site-footer__top">
+            <div class="container">
+                <div class="site-footer__top-row">
+                    <div class="site-footer__top-left-col">
+                        <h2 class="vityl-h2">{{ title }}</h2>
+                        <div class="vityl-p">
+                            <p>{{ content }}</p>
+                        </div>
+                    </div>
+                    <div class="site-footer__top-right-col">
+                        <a class="btn btn--coral btn-w200" href="{{ link.url }}">{{ link.title }}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+    {% if not hide_bottom %}
+        <div class="site-footer__bottom">
+            <div class="container">
+                <div class="site-footer__row">
+                    <div class="site-footer__col-1">
+                        <div class="site-footer-logo">
+                            <a href="{{ site.url }}">{% include 'Assets/footer-logo.svg' %}</a>
+                        </div>
+                        <div class="site-footer-email">
+                            <a href="mailto:{{ email }}">{{ email }}</a>
+                        </div>
+                        <div class="site-footer-social__row">
+                            {% if linkedin_url %}
+                                <div class="site-footer-social__col">
+                                    <a href="{{ linkedin_url }}">{% include 'Assets/linkedin.svg' %}</a>
+                                </div>
+                            {% endif %}
+                            {% if facebook_url %}
+                                <div class="site-footer-social__col">
+                                    <a href="{{ facebook_url }}">{% include 'Assets/facebook.svg' %}</a>
+                                </div>
+                            {% endif %}
+                            {% if instagram_url %}
+                                <div class="site-footer-social__col">
+                                    <a href="{{ instagram_url }}">{% include 'Assets/instgram.svg' %}</a>
+                                </div>
+                            {% endif %}
+                            {% if twitter_url %}
+                                <div class="site-footer-social__col">
+                                    <a href="{{ twitter_url }}">{% include 'Assets/twitter.svg' %}</a>
+                                </div>
+                            {% endif %}
+                            {% if youtube_url %}
+                                <div class="site-footer-social__col">
+                                    <a href="{{ youtube_url }}">{% include 'Assets/youtube.svg' %}</a>
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="site-footer__col-2">
+                        <div class="site-footer-logo">
+                            <a href="{{ site.url }}">{% include 'Assets/footer-logo.svg' %}</a>
+                        </div>
+                        <nav class="site-footer-nav">
+                            <ul>
+                                {% for item in footer_menu_1.items %}
+                                    <li class="{{ item.classes | join(' ') }}">
+                                        <a href="{{ item.link }}">{{ item.title }}</a>
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        </nav>
+                        <nav class="site-footer-nav">
+                            <ul>
+                                {% for item in footer_menu_2.items %}
+                                    <li class="{{ item.classes | join(' ') }}">
+                                        <a href="{{ item.link }}">{{ item.title }}</a>
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="site-footer__col-3">
+                        <div class="site-footer-subscribe__title">
+                            <h3>{{ gravity_form_title }}</h3>
+                        </div>
+                        <div class="site-footer-subscribe__form">
+                            {{ gravity_form_shortcode|shortcodes }}
+                        </div>
+                    </div>
+                </div>
+                <div class="site-footer-social__row site-footer-social__row--mobile">
+                    {% if linkedin_url %}
+                        <div class="site-footer-social__col">
+                            <a href="{{ linkedin_url }}">{% include 'Assets/linkedin.svg' %}</a>
+                        </div>
+                    {% endif %}
+                    {% if facebook_url %}
+                        <div class="site-footer-social__col">
+                            <a href="{{ facebook_url }}">{% include 'Assets/facebook.svg' %}</a>
+                        </div>
+                    {% endif %}
+                    {% if instagram_url %}
+                        <div class="site-footer-social__col">
+                            <a href="{{ instagram_url }}">{% include 'Assets/instgram.svg' %}</a>
+                        </div>
+                    {% endif %}
+                    {% if twitter_url %}
+                        <div class="site-footer-social__col">
+                            <a href="{{ twitter_url }}">{% include 'Assets/twitter.svg' %}</a>
+                        </div>
+                    {% endif %}
+                    {% if youtube_url %}
+                        <div class="site-footer-social__col">
+                            <a href="{{ youtube_url }}">{% include 'Assets/youtube.svg' %}</a>
+                        </div>
+                    {% endif %}
+                </div>
+                <div class="site-footer__bottom-up-button">
+                    <svg width="21" height="29" viewBox="0 0 21 29" fill="none"><path d="M8 28L7 28L7 29L8 29L8 28ZM8.70711 0.292891C8.31658 -0.0976334 7.68342 -0.0976333 7.29289 0.292891L0.928931 6.65685C0.538407 7.04738 0.538407 7.68054 0.928931 8.07107C1.31946 8.46159 1.95262 8.46159 2.34314 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65685L8.70711 0.292891ZM9 28L9 0.999998L7 0.999998L7 28L9 28ZM8 29L21 29L21 27L8 27L8 29Z" fill="#000"/></svg>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+</footer>

@@ -1,0 +1,22 @@
+<div class="vityl-post-card">
+    <div class="vityl-post-card__img">
+        <a href="{{ resource.external_url }}">
+            <img
+                class="lazyload"
+                src="{{ placeholderImage(330, 320) }}"
+                data-src="{{ resource.meta('featured_image').src|resizeDynamic(330, 320) }}"
+                data-srcset="{{ resource.meta('featured_image').src|resizeDynamic(330, 320) }} 1x, {{ resource.meta('featured_image').src|resizeDynamic(660, 640) }} 2x"
+                data-sizes="auto"
+                alt="{{ resource.meta('featured_image').alt|e }}"
+            />
+        </a>
+    </div>
+    <div class="vityl-post-card__cat">{{ resource.category }}</div>
+    <div class="vityl-post-card__content">
+        <h3>{{ resource.title }}</h3>
+        <p>{{ resource.meta('excerpt') }}</p>
+    </div>
+    <div class="vityl-post-card__link">
+        <a href="{{ resource.external_url }}">{% if resource.meta('type') == 'video' %}WATCH VIDEO{% elseif resource.meta('type') == 'ebook' %}READ E-BOOK{% else %}READ GUIDE{% endif %}</a>
+    </div>
+</div>

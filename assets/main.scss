@@ -1,0 +1,10 @@
+@import
+  'styles/variables',
+  'styles/mixins',
+  'styles/base',
+  'styles/global',
+  'styles/blog',
+  'styles/content-page';
+
+// stylelint-disable-next-line scss/at-import-no-partial-leading-underscore, scss/at-import-partial-extension-blacklist
+@import '../Components/**/_style.scss';

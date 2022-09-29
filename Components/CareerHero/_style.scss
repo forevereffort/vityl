@@ -1,0 +1,234 @@
+.vityl-career-hero {
+  background-color: rgba($color-teal, 0.15);
+  overflow: hidden;
+  padding: 135px 0 137px;
+}
+
+.vityl-career-hero__shape {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  width: 290px;
+}
+
+.vityl-career-hero__img-mask {
+  height: 145px;
+  overflow: hidden;
+  width: 145px;
+
+  img {
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+  }
+}
+
+.vityl-career-hero__img-mask--top {
+  border-radius: 145px 145px 0 0;
+}
+
+.vityl-career-hero__img-mask--right {
+  border-radius: 0 145px 145px 0;
+}
+
+.vityl-career-hero__circle--teal {
+  height: 145px;
+  position: relative;
+  width: 145px;
+
+  &::before {
+    background-color: $color-teal;
+    border-radius: 145px 0 0 145px;
+    content: '';
+    height: 145px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 73px;
+  }
+
+  &::after {
+    background-color: $color-teal;
+    border-radius: 145px 0 0 145px;
+    content: '';
+    height: 145px;
+    left: 73px;
+    position: absolute;
+    top: 0;
+    width: 72px;
+  }
+}
+
+.vityl-career-hero__circle--coral {
+  background-color: $color-coral;
+  border-radius: 50%;
+  height: 145px;
+  position: relative;
+  width: 145px;
+}
+
+#vityl-career-hero__circle--middle {
+  height: 61px;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 61px;
+  z-index: 1;
+}
+
+.vityl-career-hero__left-col {
+  padding-top: 106px;
+}
+
+.vityl-career-hero__content {
+  .vityl-p {
+    margin-top: 16px;
+  }
+}
+
+@media(min-width: $breakpoint-mobile-start) {
+  .vityl-career-hero__content {
+    .vityl-p {
+      margin-top: 19px;
+    }
+  }
+
+  .vityl-career-hero__shape {
+    width: 490px;
+  }
+
+  .vityl-career-hero__img-mask {
+    height: 245px;
+    width: 245px;
+  }
+
+  .vityl-career-hero__img-mask--top {
+    border-radius: 245px 245px 0 0;
+  }
+
+  .vityl-career-hero__img-mask--right {
+    border-radius: 0 245px 245px 0;
+  }
+
+  .vityl-career-hero__circle--teal {
+    height: 245px;
+    width: 245px;
+
+    &::before {
+      border-radius: 245px 0 0 245px;
+      height: 245px;
+      width: 123px;
+    }
+
+    &::after {
+      border-radius: 245px 0 0 245px;
+      height: 245px;
+      left: 123px;
+      width: 122px;
+    }
+  }
+
+  .vityl-career-hero__circle--coral {
+    height: 245px;
+    width: 245px;
+  }
+
+  .vityl-career-hero__next-btn {
+    bottom: 80px;
+    cursor: pointer;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+  }
+
+  #vityl-career-hero__circle--middle {
+    height: 86px;
+    width: 86px;
+  }
+}
+
+@media(min-width: 1130px) {
+  .vityl-career-hero__left-shape {
+    background-color: rgba($color-teal, 0.05);
+    border-radius: 50%;
+    box-shadow: -490px 0 rgba($color-teal, 0.05), -980px 0 rgba($color-teal, 0.05), -1470px 0 rgba($color-teal, 0.05);
+    height: 490px;
+    left: 65px;
+    position: absolute;
+    top: 0;
+    width: 490px;
+  }
+
+  .vityl-career-hero {
+    height: 100vh;
+    max-height: 1024px;
+    min-height: 900px;
+    overflow: hidden;
+    padding: 236px 0 0;
+    position: relative;
+  }
+
+  .vityl-career-hero__row {
+    align-items: center;
+    display: flex;
+    flex-direction: row-reverse;
+    position: relative;
+  }
+
+  .vityl-career-hero__circle--coral {
+    box-shadow: 490px 0 rgba($color-teal, 0.05), 735px 0 rgba($color-teal, 0.05), 980px 0 rgba($color-teal, 0.05), 1225px 0 rgba($color-teal, 0.05), 490px -245px rgba($color-teal, 0.05), 735px -245px rgba($color-teal, 0.05), 980px -245px rgba($color-teal, 0.05), 1225px -245px rgba($color-teal, 0.05);
+  }
+
+  .vityl-career-hero__left-col {
+    padding-top: 0;
+    width: 550px;
+  }
+
+  .vityl-career-hero__right-col {
+    width: calc(100% - 550px);
+  }
+
+  .vityl-career-hero__content {
+    max-width: 480px;
+  }
+}
+
+@media(max-width: $breakpoint-mobile-start) {
+  .vityl-career-hero__right-col {
+    position: relative;
+
+    &::before {
+      background-color: rgba($color-teal, 0.05);
+      border-radius: 0 340px 340px 0;
+      content: '';
+      height: 340px;
+      position: absolute;
+      right: calc(50% + 20px);
+      top: 0;
+      width: 2000px;
+    }
+
+    &::after {
+      background-color: rgba($color-teal, 0.05);
+      border-radius: 340px 0 0 340px;
+      content: '';
+      height: 340px;
+      left: calc(50% + 20px);
+      position: absolute;
+      top: 0;
+      width: 2000px;
+    }
+  }
+}
+
+@media(max-width: 1130px) {
+  .vityl-career-hero__shape {
+    margin: 0 auto;
+  }
+
+  .vityl-career-hero__next-btn {
+    display: none;
+  }
+}

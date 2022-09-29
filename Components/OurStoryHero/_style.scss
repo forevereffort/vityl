@@ -1,0 +1,367 @@
+.vityl-our-story-hero {
+  background-color: $color-eggshell;
+  overflow: hidden;
+  padding: 135px 0 30px;
+
+  .container {
+    position: relative;
+  }
+}
+
+.vityl-our-story-hero__shape {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  width: 290px;
+}
+
+.vityl-our-story-hero__img-mask {
+  height: 145px;
+  overflow: hidden;
+  width: 145px;
+
+  img {
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+  }
+}
+
+.vityl-our-story-hero__img-mask--bottom {
+  border-radius: 0 0 145px 145px;
+}
+
+.vityl-our-story-hero__img-mask--top {
+  border-radius: 145px 145px 0 0;
+}
+
+#vityl-our-story-hero__circle--middle {
+  height: 80px;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  z-index: 1;
+}
+
+.vityl-our-story-hero__circle--mint {
+  background-color: $color-mint;
+  border-radius: 50%;
+  height: 145px;
+  width: 145px;
+}
+
+.vityl-our-story-hero__circle--coral {
+  height: 145px;
+  position: relative;
+  width: 145px;
+
+  &::before {
+    background-color: $color-coral;
+    border-radius: 145px 145px 0 0;
+    content: '';
+    height: 73px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 145px;
+  }
+
+  &::after {
+    background-color: $color-coral;
+    border-radius: 145px 145px 0 0;
+    content: '';
+    height: 72px;
+    left: 0;
+    position: absolute;
+    top: 73px;
+    width: 145px;
+  }
+}
+
+.vityl-our-story-hero__content {
+  .vityl-p {
+    margin-top: 13px;
+  }
+
+  p+p {
+    margin-top: 20px;
+  }
+}
+
+.vityl-our-story-hero__link {
+  margin-top: 35px;
+}
+
+.vityl-our-story-hero__mask-1 {
+  background-color: rgba($color-lemon, 0.1);
+  border-radius: 0 430px 430px 0;
+  height: 430px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 2000px;
+}
+
+.vityl-our-story-hero__mask-2 {
+  background-color: rgba($color-lemon, 0.1);
+}
+
+.vityl-our-story-hero__mask-row {
+  left: 40px;
+  position: absolute;
+  right: 40px;
+}
+
+.vityl-our-story-hero__sliding-vertical {
+  overflow: hidden;
+  position: relative;
+  
+  span {
+    animation: vitylTopToBottom 12.5s linear infinite 0s;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+
+    &:nth-child(2) {
+      animation-delay: 2.5s;
+    }
+
+    &:nth-child(3) {
+      animation-delay: 5s;
+    }
+
+    &:nth-child(4) {
+      animation-delay: 7.5s;
+    }
+
+    &:nth-child(5) {
+      animation-delay: 10s;
+    }
+  }
+}
+
+@keyframes vitylTopToBottom {
+  0% { opacity: 0; }
+
+  5% { opacity: 0;
+    transform: translateY(-50px); }
+
+  10% { opacity: 1;
+    transform: translateY(0); }
+
+  25% { opacity: 1;
+    transform: translateY(0); }
+
+  30% { opacity: 0;
+    transform: translateY(50px); }
+  80% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+.vityl-our-story-hero__fade-in {
+  overflow: hidden;
+  position: relative;
+
+  span {
+    animation: vitylFadeEffect 8s linear infinite 0s;
+    color: $color-rich-black;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+
+    &:nth-child(2) {
+      animation-delay: 1.6s;
+    }
+
+    &:nth-child(3) {
+      animation-delay: 3.2s;
+    }
+
+    &:nth-child(4) {
+      animation-delay: 4.8s;
+    }
+
+    &:nth-child(5) {
+      animation-delay: 6.4s;
+    }
+  }
+}
+
+@keyframes vitylFadeEffect {
+  0% { opacity: 0; }
+
+  5% { opacity: 0;
+    transform: translateY(0); }
+
+  10% { opacity: 1;
+    transform: translateY(0); }
+
+  25% { opacity: 1;
+    transform: translateY(0); }
+
+  30% { opacity: 0;
+    transform: translateY(0); }
+  80% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+@media(min-width: $breakpoint-mobile-start) {
+  .vityl-our-story-hero__mask-row {
+    display: flex;
+  }
+
+  .vityl-our-story-hero__mask-left-col {
+    position: relative;
+    width: 145px;
+  }
+
+  .vityl-our-story-hero__mask-right-col {
+    position: relative;
+    width: calc(100% - 145px);
+  }
+
+  .vityl-our-story-hero__mask-1 {
+    border-radius: 0 600px 600px 0;
+    height: 600px;
+    width: 3000px;
+  }
+
+  .vityl-our-story-hero__mask-2 {
+    background-color: rgba($color-lemon, 0.1);
+    border-radius: 600px 0 0 600px;
+    height: 600px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 3000px;
+  }
+
+
+  .vityl-our-story-hero__content {
+    .vityl-p {
+      margin-top: 20px;
+    }
+
+    p+p {
+      margin-top: 32px;
+    }
+  }
+
+  .vityl-our-story-hero__shape {
+    width: 490px;
+  }
+
+  .vityl-our-story-hero__circle--mint {
+    height: 245px;
+    width: 245px;
+  }
+
+  .vityl-our-story-hero__circle--coral {
+    height: 245px;
+    width: 245px;
+
+    &::before {
+      background-color: $color-coral;
+      border-radius: 245px 245px 0 0;
+      content: '';
+      height: 123px;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 245px;
+    }
+
+    &::after {
+      background-color: $color-coral;
+      border-radius: 245px 245px 0 0;
+      content: '';
+      height: 122px;
+      left: 0;
+      position: absolute;
+      top: 123px;
+      width: 245px;
+    }
+  }
+
+  .vityl-our-story-hero__img-mask {
+    height: 245px;
+    width: 245px;
+  }
+
+  .vityl-our-story-hero__img-mask--bottom {
+    border-radius: 0 0 245px 245px;
+  }
+
+  .vityl-our-story-hero__img-mask--top {
+    border-radius: 245px 245px 0 0;
+  }
+
+  #vityl-our-story-hero__circle--middle {
+    height: 137px;
+    width: 137px;
+  }
+}
+
+@media(min-width: 1130px) {
+  .vityl-our-story-hero__mask-row {
+    top: -19px;
+  }
+
+  .vityl-our-story-hero {
+    height: 100vh;
+    max-height: 1024px;
+    min-height: 900px;
+    overflow: hidden;
+    padding: 220px 0 0;
+  }
+
+  .vityl-our-story-hero__row {
+    align-items: center;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .vityl-our-story-hero__left-col {
+    width: 650px;
+  }
+
+  .vityl-our-story-hero__content {
+    max-width: 610px;
+  }
+
+  .vityl-our-story-hero__circle--mint {
+    box-shadow: 490px 0 rgba($color-lemon, 0.15), 735px 0 rgba($color-lemon, 0.15), 980px 0 rgba($color-lemon, 0.15), 1225px 0 rgba($color-lemon, 0.15), 490px 245px rgba($color-lemon, 0.15), 735px 245px rgba($color-lemon, 0.15), 980px 245px rgba($color-lemon, 0.15), 1225px 245px rgba($color-lemon, 0.15);
+  }
+
+  .vityl-our-story-hero__right-col {
+    width: calc(100% - 650px);
+  }
+}
+
+@media(max-width: $breakpoint-mobile-start) {
+  .vityl-our-story-hero__mask-2 {
+    border-radius: 340px 0 0 340px;
+    height: 340px;
+    left: 0;
+    position: absolute;
+    top: 430px;
+    width: 2000px;
+  }
+}
+
+@media(max-width: 1130px) {
+  .vityl-our-story-hero__shape {
+    margin: 0 auto;
+  }
+
+  .vityl-our-story-hero__left-col {
+    margin-top: 45px;
+  }
+
+  .vityl-our-story-hero__link {
+    text-align: center;
+  }
+}

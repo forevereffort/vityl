@@ -1,0 +1,321 @@
+.vityl-price-hero {
+  background-color: rgba($color-blue, 0.1);
+  overflow: hidden;
+  padding: 150px 0 60px;
+  position: relative;
+}
+
+.vityl-price-hero__content {
+  .vityl-p {
+    margin-top: 29px;
+  }
+}
+
+.vityl-price-hero__plan-header-price {
+  font-size: 16px;
+  font-weight: $font-weight-bold;
+  line-height: 1.5;
+}
+
+.vityl-price-hero__plan-header-row {
+  border-bottom: 1px solid $color-rich-black;
+  padding: 21px 0 17px;
+}
+
+.vityl-price-hero__feature-text {
+  font-size: 14px;
+  line-height: 2.714285714;
+  padding-left: 25px;
+  position: relative;
+
+  &::before {
+    background-color: $color-blue;
+    border-radius: 50px;
+    content: '';
+    height: 12px;
+    left: 0;
+    position: absolute;
+    top: 11px;
+    width: 12px;
+  }
+  
+  &::after {
+    border: solid $color-eggshell;
+    border-width: 0 1px 1px 0;
+    content: '';
+    height: 6px;
+    left: 4px;
+    position: absolute;
+    top: 13px;
+    transform: rotate(45deg);
+    width: 3px;
+  }
+}
+
+.vityl-price-hero__feature-list {
+  margin-top: 15px;
+}
+
+.vityl-price-hero__trial {
+  margin-top: 11px;
+  padding-left: 25px;
+
+  p {
+    font-size: 16px;
+    font-weight: $font-weight-bold;
+    line-height: 1.5;
+  }
+}
+
+.vityl-price-hero__plan-btn-row {
+  margin-top: 26px;
+  text-align: center;
+}
+
+.vityl-price-hero__metion-1 {
+  color: $color-blue;
+  font-size: 14px;
+  font-weight: $font-weight-bold;
+  letter-spacing: 0.05em;
+  line-height: 1.29;
+  margin-top: 67px;
+  padding-bottom: 40px;
+  position: relative;
+  text-align: center;
+
+  &::after {
+    background-color: $color-blue;
+    bottom: 19px;
+    content: '';
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    width: 130px;
+  }
+}
+
+.vityl-price-hero__metion-2 {
+  color: $color-rich-black;
+  font-size: 14px;
+  font-weight: $font-weight-bold;
+  letter-spacing: 0.05em;
+  line-height: 1.29;
+  text-align: center;
+}
+
+@media(min-width: $breakpoint-mobile-start) {
+  .vityl-price-hero {
+    padding: 216px 0 87px;
+
+    .container {
+      position: relative;
+      z-index: 2;
+    }
+  }
+
+  .vityl-price-hero__mask {
+    margin: 0 auto;
+    max-width: 1440px;
+    position: relative;
+    z-index: 1;
+
+    &::before {
+      background-color: rgba($color-blue, 0.05);
+      border-radius: 470px 0 0 470px;
+      content: '';
+      height: 970px;
+      left: 0;
+      position: absolute;
+      top: -69px;
+      width: 470px;
+    }
+
+    &::after {
+      background-color: rgba($color-blue, 0.05);
+      border-radius: 50%;
+      content: '';
+      height: 970px;
+      left: 470px;
+      position: absolute;
+      top: -69px;
+      width: 970px;
+    }
+  }
+
+  .vityl-price-hero__content {
+    .vityl-p {
+      margin-top: 18px;
+    }
+  }
+
+  .vityl-price-hero__plan-row {
+    display: flex;
+    margin: 64px -25px 0;
+  }
+
+  .vityl-price-hero__plan-col {
+    background-color: transparent;
+    border-radius: 30px;
+    opacity: 0.3;
+    padding: 0 25px;
+    transition: opacity 0.2s ease-out, background-color 0.2s ease-out, box-shadow 0.2s ease-out;
+    width: 33.33333%;
+  }
+
+  .vityl-price-hero__plan-col--active {
+    background-color: rgba($color-blue, 0.3);
+    box-shadow: 0 11px 50px 5px rgba(85, 88, 91, 0.2);
+    opacity: 1;
+  }
+
+  .vityl-price-hero__plan-header-row {
+    padding: 31px 0 6px;
+  }
+
+  .vityl-price-hero__plan-header-price {
+    font-size: 18px;
+    line-height: 1.33;
+  }
+
+  .vityl-price-hero__feature-list {
+    margin-top: 27px;
+  }
+
+  .vityl-price-hero__feature-text {
+    font-size: 16px;
+    line-height: 2.375;
+    padding-left: 30px;
+
+    &::before {
+      height: 16px;
+      position: absolute;
+      width: 16px;
+    }
+    
+    &::after {
+      height: 7px;
+      left: 6px;
+      top: 15px;
+      width: 4px;
+    }
+  }
+
+  .vityl-price-hero__trial {
+    margin-top: 39px;
+    padding-left: 30px;
+
+    p {
+      font-size: 18px;
+      line-height: 1.33;
+    }
+  }
+
+  .vityl-price-hero__metion-1 {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-top: 72px;
+    padding-bottom: 34px;
+
+    &::after {
+      bottom: 13px;
+      height: 2px;
+      width: 390px;
+    }
+  }
+
+  .vityl-price-hero__metion-2 {
+    font-size: 18px;
+    line-height: 1.33;
+  }
+
+  .vityl-price-hero__plan-bottom {
+    bottom: 30px;
+    left: 0;
+    position: absolute;
+    right: 0;
+  }
+
+  .vityl-price-hero__plan-inner {
+    height: 100%;
+    padding-bottom: 165px;
+    position: relative;
+  }
+
+  .vityl-price-hero__plan-header-title {
+    span {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: 1300px) {
+  .vityl-price-hero__plan-header-row {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media(max-width: 1300px) {
+  .vityl-price-hero__plan-header-price {
+    margin-top: 5px;
+  }
+}
+
+@media(max-width: $breakpoint-mobile-start) {
+  .vityl-price-hero__plan-row {
+    margin: 0 -40px;
+  }
+
+  .vityl-price-hero__plan-col {
+    padding: 0 40px;
+  }
+
+  .vityl-price-hero__plan-col--active {
+    background-color: rgba($color-blue, 0.3);
+
+    .vityl-price-hero__plan-inner-content {
+      display: block;
+    }
+
+    .vityl-price-hero__plan-header-title {
+      span {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  .vityl-price-hero__metion-2 {
+    padding-bottom: 54px;
+  }
+
+  .vityl-price-hero__content {
+    padding-bottom: 48px;
+  }
+
+  .vityl-price-hero__plan-inner-content {
+    display: none;
+  }
+
+  .vityl-price-hero__plan-header-title {
+    position: relative;
+
+    span {
+      position: absolute;
+      right: 0;
+      top: 5px;
+    }
+  }
+
+  .vityl-price-hero__mask {
+    background-color: rgba($color-blue, 0.05);
+    border-radius: 50%;
+    height: 375px;
+    left: 50%;
+    margin-left: -187px;
+    position: absolute;
+    top: 105px;
+    width: 375px;
+  }
+}

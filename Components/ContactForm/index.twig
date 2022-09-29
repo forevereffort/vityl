@@ -1,0 +1,20 @@
+<section class="vityl-contact-form">
+    <div class="container">
+        <div class="vityl-contact-form__mask-row">
+            <div class="vityl-contact-form__mask-left-col">
+                <div class="vityl-contact-form__mask-1"></div>
+            </div>
+            <div class="vityl-contact-form__mask-right-col">
+                <div class="vityl-contact-form__mask-2"></div>
+            </div>
+        </div>
+        <div class="vityl-contact-form__content">
+            <h1 class="vityl-h1-5">{{ title }}</h1>
+            <h3>{{ sub_title }}</h3>
+            {{ content|apply_filters('the_content') }}
+        </div>
+        <div class="vityl-contact-form__wrapper">
+            {{ gravity_form_shortcode|shortcodes }}
+        </div>
+    </div>
+</section>

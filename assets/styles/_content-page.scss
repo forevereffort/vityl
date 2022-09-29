@@ -1,0 +1,110 @@
+.content-page {
+  padding: 216px 0 183px;
+
+  h1 {
+    font-size: 28px;
+    letter-spacing: 0.02em;
+    line-height: 1.19;
+    margin-top: 40px;
+  }
+
+  h2 {
+    font-size: 24px;
+    letter-spacing: 0.05em;
+    line-height: 1.476;
+    margin-top: 40px;
+  }
+
+  h3 {
+    font-size: 22px;
+    letter-spacing: 0.05em;
+    line-height: 1.6;
+    margin-top: 40px;
+  }
+
+  h4 {
+    font-size: 20px;
+    letter-spacing: 0.05em;
+    line-height: 1.78;
+    margin-top: 40px;
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 1.67;
+    margin-top: 40px;
+  }
+
+  ol {
+    list-style: decimal;
+    margin-top: 40px;
+    padding: 0 0 0 18px;
+        
+    ol {
+      list-style: lower-alpha;
+      margin: 0;
+    }
+  }
+
+  ul {
+    list-style: disc;
+    margin-top: 40px;
+    padding: 0 0 0 18px;
+  }
+
+  li {
+    font-size: 18px;
+    line-height: 1.67;
+    margin: 15px 0;
+  }
+}
+
+@media(max-width: $breakpoint-mobile-start) {
+  .content-page {
+    padding: 151px 0 120px;
+
+    h1 {
+      font-size: 26px;
+      line-height: 1.3125;
+    }
+
+    h2 {
+      font-size: 22px;
+      letter-spacing: 0.02em;
+      line-height: 1.5;
+    }
+
+    h3 {
+      font-size: 20px;
+    }
+
+    h4 {
+      font-size: 18px;
+      letter-spacing: 0.02em;
+      line-height: 1.2;
+      margin-top: 20px;
+    }
+    
+    p {
+      font-size: 16px;
+      line-height: 1.5;
+      margin-top: 20px;
+    }
+
+    ol {
+      margin-top: 20px;
+      padding: 0 0 0 16px;
+    }
+
+    ul {
+      margin-top: 20px;
+      padding: 0 0 0 16px;
+    }
+
+    li {
+      font-size: 16px;
+      line-height: 1.5;
+      margin: 15px 0;
+    }
+  }
+}

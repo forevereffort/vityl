@@ -1,0 +1,30 @@
+<section class="vityl-science">
+    <div class="container">
+        <div class="vityl-science__row">
+            <div class="vityl-science__right-col">
+                <div class="pre-title">{{ pre_title }}</div>
+                <div class="vityl-science__img">
+                    <div id="vityl-science__lottie"></div>
+                    <img
+                        class="lazyload"
+                        src="{{ placeholderImage(image.width / 2, image.height / 2) }}"
+                        data-src="{{ image.src|resizeDynamic(image.width / 2) }}"
+                        data-srcset="{{ image.src|resizeDynamic(image.width / 2) }} 1x, {{ image.src|resizeDynamic(image.width) }} 2x"
+                        data-sizes="auto"
+                        alt="{{ image.alt|e }}"
+                    />
+                </div>
+            </div>
+            <div class="vityl-science__left-col">
+                <div class="pre-title">{{ pre_title }}</div>
+                <h2 class="vityl-h2">{{ title }}</h2>
+                <div class="vityl-p">
+                    <p>{{ content }}</p>
+                </div>
+                <div class="vityl-science__link">
+                    <a class="btn btn--black" href="{{ link.url }}">{{ link.title }}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

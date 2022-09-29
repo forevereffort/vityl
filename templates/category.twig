@@ -1,0 +1,6 @@
+{% extends 'templates/_document.twig' %}
+
+{% block content %}
+  {{ renderComponent('ResourceList', {title: title, posts: posts, blog_cat: blog_cat}) }}
+  {{ renderComponent('Signup', {title: signup_form_title, gravity_form_shortcode: gravity_form_shortcode, is_page: true}) }}
+{% endblock %}

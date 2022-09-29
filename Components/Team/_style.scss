@@ -1,0 +1,128 @@
+.vityl-team {
+  background-color: rgba($color-lemon, 0.1);
+  padding: 60px 0 100px;
+}
+
+.vityl-team__custom-padding-top {
+  padding-top: var(--vityl-team-custom-padding-top-mobile);
+}
+
+.vityl-team__custom-padding-bottom {
+  padding-bottom: var(--vityl-team-custom-padding-bottom-mobile);
+}
+
+.vityl-team__row {
+  margin-top: 95px;
+}
+
+.vityl-team__col {
+  text-align: center;
+}
+
+.vityl-team__avatar {
+  img {
+    border-radius: 50%;
+  }
+}
+
+.vityl-team__name {
+  margin-top: 20px;
+
+  h3 {
+    font-size: 18px;
+    line-height: 1.11;
+  }
+}
+
+.vityl-team__role {
+  font-size: 14px;
+  line-height: 1.71;
+  margin-top: 6px;
+}
+
+.vityl-team__link {
+  margin-top: 16px;
+
+  a {
+    border-bottom: 1px solid $color-rich-black;
+    color: $color-rich-black;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: $font-weight-bold;
+    line-height: 1.5;
+  }
+}
+
+@media(min-width: $breakpoint-mobile-start) {
+  .vityl-team {
+    padding: 163px 0 262px;
+  }
+
+  .vityl-team__custom-padding-top {
+    padding-top: var(--vityl-team-custom-padding-top-desktop);
+  }
+  
+  .vityl-team__custom-padding-bottom {
+    padding-bottom: var(--vityl-team-custom-padding-bottom-desktop);
+  }
+
+  .vityl-team__row {
+    display: grid;
+    margin-top: 145px;
+  }
+  
+  .vityl-team__row--3_cols {
+    column-gap: 40px;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 40px;
+  }
+  
+  .vityl-team__row--4_cols {
+    column-gap: 40px;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 40px;
+  }
+
+  .vityl-team__name {
+    margin-top: 30px;
+
+    h3 {
+      font-size: 20px;
+      line-height: 1;
+    }
+  }
+
+  .vityl-team__role {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-top: 9px;
+  }
+
+  .vityl-team__link {
+    margin-top: 22px;
+
+    a {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+  }
+}
+
+@media(max-width: $breakpoint-mobile-start) {
+  .vityl-team__avatar {
+    img {
+      width: 130px;
+    }
+  }
+
+  .vityl-team__col+.vityl-team__col {
+    margin-top: 60px;
+  }
+}
+
+@media(min-width: 1300px) {
+  .vityl-team__row--4_cols {
+    column-gap: 40px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}

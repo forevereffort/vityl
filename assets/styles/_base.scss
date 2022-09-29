@@ -1,0 +1,56 @@
+@include font-face(quote($font-main-family), 'neuzeitgro-lig', quote($font-weight-light), 'normal', true, '../assets/fonts/neuzeit-grotesk/');
+@include font-face(quote($font-main-family), 'neuzeitgro-reg', quote($font-weight-normal), 'normal', true, '../assets/fonts/neuzeit-grotesk/');
+@include font-face(quote($font-main-family), 'neuzeitgro-bol', quote($font-weight-bold), 'normal', true, '../assets/fonts/neuzeit-grotesk/');
+
+@include font-face(quote($font-sub-family), 'gazpacho-bold', quote($font-weight-bold), 'normal', true, '../assets/fonts/gazpacho/');
+
+html {
+  box-sizing: border-box;
+  color: $color-rich-black;
+  font-family: $font-main-family, Helvetica, Arial, sans-serif;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-sub-family, Helvetica, Arial, sans-serif;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+input:focus,
+button:focus,
+textarea:focus,
+select:focus {
+  outline: 0;
+}
+
+img {
+  max-width: 100%;
+}

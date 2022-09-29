@@ -1,0 +1,61 @@
+<section class="vityl-platform">
+    <div class="container">
+        <div class="pre-title">{{ pre_title }}</div>
+        <div class="vityl-platform__content-row">
+            <div class="vityl-platform__content-left-col">
+                <h2 class="vityl-h2">{{ title }}</h2>
+            </div>
+            <div class="vityl-platform__content-right-col">
+                <div class="vityl-p">
+                    <p>{{ content }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="vityl-platform__link desktop-show">
+            <a class="btn btn--black" href="{{ link.url }}">{{ link.title }}</a>
+        </div>
+        <div class="vityl-platform__list-row" is="vityl-platform-list">
+            <div class="vityl-platform__list-right-col">
+                <div class="vityl-platform-slider">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            {% for item in list %}
+                                <div class="swiper-slide">
+                                    <img
+                                        class="lazyload"
+                                        src="{{ placeholderImage(690, 430) }}"
+                                        data-src="{{ item.image.src|resizeDynamic(690, 430) }}"
+                                        data-srcset="{{ item.image.src|resizeDynamic(690, 430) }} 1x, {{ item.image.src|resizeDynamic(1380, 860) }} 2x"
+                                        data-sizes="auto"
+                                        alt="{{ item.image.alt|e }}"
+                                    />
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div class="vityl-platform-slider__btn-row">
+                        <div class="vityl-platform-slider__btn vityl-platform-slider__btn--prev">
+                            <svg width="18" height="33" viewBox="0 0 18 33" fill="none"><path d="M16.1421 30.6483L1.99995 16.5062L16.1421 2.36404" stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                        <div class="vityl-platform-slider__btn vityl-platform-slider__btn--next">
+                            <svg width="18" height="32" viewBox="0 0 18 32" fill="none"><path d="M1.82422 2L15.9664 16.1421L1.82422 30.2843" stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="vityl-platform__list-left-col">
+                {% for index, item in list %}
+                    <div class="vityl-platform__list-text-item {% if index == 0 %}active{% endif %}" data-index="{{ index + 1 }}">
+                        <h3 class="vityl-h3">{{ item.title }}</h3>
+                        <div class="vityl-p">
+                            <p>{{ item.content }}</p>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="vityl-platform__link mobile-show">
+            <a class="btn btn--black" href="{{ link.url }}">{{ link.title }}</a>
+        </div>
+    </div>
+</section>

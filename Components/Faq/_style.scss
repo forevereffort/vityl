@@ -1,0 +1,224 @@
+.vityl-faq {
+  background-color: $color-eggshell;
+  overflow: hidden;
+  padding: 151px 0 120px;
+
+  .container {
+    position: relative;
+  }
+}
+
+.vityl-faq__cat-row {
+  display: flex;
+  margin: 73px 0 38px;
+}
+
+.vityl-faq__cat-inner {
+  border-bottom: 2px solid $color-rich-black;
+  cursor: pointer;
+  font-size: 18px;
+  letter-spacing: 0.05em;
+  line-height: 1.33;
+  opacity: 0.4;
+  padding-bottom: 6px;
+  transition: opacity 0.2s ease-out;
+
+  &:hover,
+  &.active {
+    opacity: 1;
+  }
+}
+
+.vityl-faq__info-inner {
+  border-bottom: 1px solid $color-rich-black;
+  padding: 9px 0 11px;
+}
+
+.vityl-faq__info-title {
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: $font-weight-bold;
+  letter-spacing: 0.05em;
+  line-height: 1.5;
+  padding-right: 30px;
+  position: relative;
+  user-select: none;
+
+  &.close {
+    &::before {
+      transform: rotate(180deg);
+    }
+    
+    &::after { 
+      opacity: 1;
+      transform: rotate(180deg);     
+    }
+  }
+
+  &::before {
+    background-color: $color-rich-black;
+    content: '';
+    height: 2px;
+    position: absolute;
+    right: 0;
+    top: 10px;
+    transition: transform 0.2s ease-out;
+    width: 8px;
+  }
+  
+  &::after {
+    background-color: $color-rich-black;
+    content: '';
+    height: 8px;
+    opacity: 0;
+    position: absolute;
+    right: 3px;
+    top: 7px;
+    transition: transform 0.2s ease-out, opacity 0.2s ease-out;
+    width: 2px;
+  }
+}
+
+.vityl-faq__info-content {
+  padding: 19px 0 10px;
+
+  p {
+    font-size: 16px;
+    letter-spacing: 0.05em;
+    line-height: 1.5;
+  }
+
+  p+p {
+    margin-top: 20px;
+  }
+}
+
+@media(min-width: $breakpoint-mobile-start) {
+  .vityl-faq {
+    padding: 216px 0 183px;
+
+    .vityl-h1-5 {
+      letter-spacing: 0;
+    }
+  }
+
+  .vityl-faq__mask-row {
+    display: flex;
+    left: 40px;
+    position: absolute;
+    right: 40px;
+    top: 30px;
+    z-index: 1;
+  }
+
+  .vityl-faq__mask-left-col {
+    position: relative;
+    width: 90px;
+  }
+
+  .vityl-faq__mask-right-col {
+    position: relative;
+    width: calc(100% - 90px);
+  }
+
+  .vityl-faq__mask-1 {
+    background-color: rgba($color-mint, 0.2);
+    border-radius: 0 515px 515px 0;
+    height: 515px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 3000px;
+  }
+
+  .vityl-faq__mask-2 {
+    background-color: rgba($color-mint, 0.2);
+    border-radius: 515px 0 0 515px;
+    height: 515px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 3000px;
+  }
+
+  .vityl-faq__inner {
+    position: relative;
+    z-index: 2;
+  }
+
+  .vityl-faq__cat-row {
+    justify-content: center;
+    margin: 93px 0 62px;
+  }
+
+  .vityl-faq__cat-col {
+    padding: 0 45px;
+  }
+
+  .vityl-faq__cat-inner {
+    font-size: 20px;
+    line-height: 1.2;
+    padding-bottom: 2px;
+  }
+
+  .vityl-faq__info-inner {
+    border-bottom: 2px solid $color-rich-black;
+    padding: 18px 0 17px;
+  }
+
+  .vityl-faq__info-title {
+    font-size: 20px;
+    line-height: 1.2;
+    padding-right: 50px;
+
+    &::before {
+      height: 2px;
+      right: 0;
+      top: 10px;
+      width: 20px;
+    }
+
+    &::after {
+      height: 20px;
+      right: 9px;
+      top: 1px;
+      width: 2px;
+    }
+  }
+
+  .vityl-faq__info-content {
+    padding: 25px 0 11px;
+
+    p {
+      font-size: 18px;
+      line-height: 1.33;
+    }
+  }
+}
+
+@media(max-width: $breakpoint-mobile-start) {
+  .vityl-faq__cat-row {
+    justify-content: space-between;
+    max-width: 290px;
+  }
+
+  .vityl-faq__mask-1 {
+    background-color: rgba($color-mint, 0.2);
+    border-radius: 0 430px 430px 0;
+    height: 430px;
+    position: absolute;
+    right: 40px;
+    top: 0;
+    width: 2000px;
+  }
+
+  .vityl-faq__mask-2 {
+    background-color: rgba($color-mint, 0.2);
+    border-radius: 340px 0 0 340px;
+    height: 340px;
+    left: 40px;
+    position: absolute;
+    top: 430px;
+    width: 2000px;
+  }
+}

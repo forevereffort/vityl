@@ -1,0 +1,267 @@
+.vityl-belong-hero {
+  background-color: rgba($color-lemon, 0.05);
+  overflow: hidden;
+  padding: 135px 0 27px;
+
+  .container {
+    position: relative;
+  }
+}
+
+.vityl-belong-hero__shape {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  width: 290px;
+}
+
+.vityl-belong-hero__img-mask--left {
+  border-radius: 50% 0 0 50%;
+}
+
+.vityl-belong-hero__img-mask--right {
+  border-radius: 0 50% 50% 0;
+}
+
+.vityl-belong-hero__img-mask {
+  height: 145px;
+  overflow: hidden;
+  width: 145px;
+
+  img {
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+  }
+}
+
+.vityl-belong-hero__circle--coral {
+  background-color: $color-coral;
+  border-radius: 50%;
+  height: 145px;
+  width: 145px;
+}
+
+.vityl-belong-hero__circle--teal {
+  height: 145px;
+  position: relative;
+  width: 145px;
+
+  &::before {
+    background-color: $color-teal;
+    border-radius: 145px 145px 0 0;
+    content: '';
+    height: 72px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 145px;
+  }
+
+  &::after {
+    background-color: $color-teal;
+    border-radius: 145px 145px 0 0;
+    content: '';
+    height: 73px;
+    left: 0;
+    position: absolute;
+    top: 72px;
+    width: 145px;
+  }
+}
+
+#vityl-belong-hero__circle--middle {
+  height: 58px;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 58px;
+  z-index: 1;
+}
+
+.vityl-belong-hero__content {
+  margin-top: 29px;
+}
+
+.vityl-belong-hero__link {
+  margin-top: 35px;
+}
+
+.vityl-belong-hero__mask-row {
+  left: 40px;
+  position: absolute;
+  right: 40px;
+  z-index: -1;
+}
+
+.vityl-belong-hero__mask-1 {
+  background-color: rgba($color-blue, 0.1);
+  border-radius: 0 430px 430px 0;
+  height: 430px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 2000px;
+}
+
+.vityl-belong-hero__mask-2 {
+  background-color: rgba($color-blue, 0.1);
+}
+
+@media(min-width: $breakpoint-mobile-start) {
+  .vityl-belong-hero__content {
+    .vityl-p {
+      margin-top: 20px;
+    }
+  }
+
+  .vityl-belong-hero__next-btn {
+    bottom: 80px;
+    cursor: pointer;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+  }
+
+  .vityl-belong-hero__shape {
+    width: 490px;
+  }
+
+  .vityl-belong-hero__img-mask {
+    height: 245px;
+    width: 245px;
+  }
+
+  .vityl-belong-hero__circle--coral {
+    height: 245px;
+    width: 245px;
+  }
+
+  .vityl-belong-hero__circle--teal {
+    height: 245px;
+    width: 245px;
+
+    &::before {
+      border-radius: 245px 245px 0 0;
+      height: 123px;
+      width: 245px;
+    }
+
+    &::after {
+      border-radius: 245px 245px 0 0;
+      height: 122px;
+      top: 123px;
+      width: 245px;
+    }
+  }
+
+  .vityl-belong-hero__mask-row {
+    display: flex;
+  }
+
+  .vityl-belong-hero__mask-left-col {
+    position: relative;
+    width: 145px;
+  }
+
+  .vityl-belong-hero__mask-right-col {
+    position: relative;
+    width: calc(100% - 145px);
+  }
+
+  .vityl-belong-hero__mask-1 {
+    border-radius: 0 615px 615px 0;
+    height: 615px;
+    right: 0;
+    top: 0;
+    width: 3000px;
+  }
+
+  .vityl-belong-hero__mask-2 {
+    border-radius: 615px 0 0 615px;
+    height: 615px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 6000px;
+  }
+
+  #vityl-belong-hero__circle--middle {
+    height: 86px;
+    width: 86px;
+  }
+}
+
+@media(min-width: 1130px) {
+  .vityl-belong-hero__mask-row {
+    top: -60px;
+  }
+
+  .vityl-belong-hero {
+    height: 100vh;
+    max-height: 1024px;
+    min-height: 900px;
+    overflow: hidden;
+    padding: 265px 0 0;
+    position: relative;
+  }
+
+  .vityl-belong-hero__content {
+    max-width: 575px;
+  }
+
+  .vityl-belong-hero__col--left {
+    width: 650px;
+  }
+
+  .vityl-belong-hero__col--right {
+    width: calc(100% - 650px);
+  }
+
+  .vityl-belong-hero__row {
+    align-items: center;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .vityl-belong-hero__circle--coral {
+    box-shadow: 245px 0 #c5dff6, 490px 0 #c5dff6, 735px 0 #c5dff6, 980px 0 #c5dff6, 1225px 0 #c5dff6,245px 245px #c5dff6, 490px 245px #c5dff6, 735px 245px #c5dff6, 980px 245px #c5dff6, 1225px 245px #c5dff6;
+  }
+}
+
+@media(max-width: $breakpoint-mobile-start) {
+  .vityl-belong-hero__mask-2 {
+    border-radius: 340px 0 0 340px;
+    height: 340px;
+    left: 0;
+    position: absolute;
+    top: 430px;
+    width: 2000px;
+  }
+}
+
+@media(max-width: 1130px) {
+  .vityl-belong-hero__shape {
+    margin: 0 auto;
+  }
+
+  .vityl-belong-hero__next-btn {
+    display: none;
+  }
+
+  .vityl-belong-hero__col--left {
+    margin-top: 34px;
+  }
+
+  .vityl-belong-hero__link {
+    text-align: center;
+  }
+}
+
+@media(min-width: $breakpoint-mobile-start) and (max-width: 1130px) {
+  .vityl-belong-hero {
+    padding-bottom: 100px;
+  }
+}

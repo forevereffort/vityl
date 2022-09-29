@@ -1,0 +1,113 @@
+.vityl-white-paper {
+  background-color: #fdddce;
+}
+
+.vityl-white-paper__row {
+  padding: 50px 0;
+}
+
+.vityl-white-paper__left {
+  .vityl-p {
+    margin-top: 2px;
+  }
+}
+
+.vityl-white-paper__right {
+  .gform_confirmation_message {
+    font-size: 20px;
+    letter-spacing: 0.05em;
+    line-height: 1.6;
+  }
+
+  .gform_submission_error {
+    color: $color-coral;
+    font-size: 16px;
+    letter-spacing: 0.05em;
+    line-height: 1.5;
+  }
+
+  .gfield_validation_message {
+    color: $color-coral;
+  }
+  
+  .gfield_label {
+    display: none;
+  }
+
+  .ginput_container {
+    input {
+      background-color: transparent;
+      border: 0;
+      border-bottom: 1px solid $color-rich-black;
+      color: $color-rich-black;
+      font-size: 16px;
+      letter-spacing: 0.05em;
+      padding: 0;
+      padding: 7px 0;
+      width: 100%;
+    }
+  }
+
+  .gform_footer {
+    margin-top: 33px;
+
+    input {
+      @extend %btn;
+      @extend %btn--black;
+    }
+  }
+}
+
+@media(max-width: $breakpoint-mobile-start) {
+  .vityl-white-paper__right {
+    margin-top: 40px;
+  }
+}
+
+@media(min-width: $breakpoint-mobile-start) {
+  .vityl-white-paper {
+    height: 400px;
+
+    .container {
+      align-items: center;
+      display: flex;
+      height: 100%;
+      position: relative;
+
+      &::after {
+        background-color: #fdd5c6;
+        border-radius: 50%;
+        box-shadow: 400px 0 #fdd5c6, 800px 0 #fdd5c6, 1200px 0 #fdd5c6, 1600px 0 #fdd5c6;
+        content: '';
+        height: 400px;
+        position: absolute;
+        right: 30px;
+        top: 0;
+        width: 400px;
+        z-index: 1;
+      }
+    }
+  }
+
+  .vityl-white-paper__row {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 2;
+  }
+
+  .vityl-white-paper__left {
+    max-width: 580px;
+    width: calc(100% - 500px);
+
+    .vityl-p {
+      margin-top: 20px;
+    }
+  }
+
+  .vityl-white-paper__right {
+    padding-left: 100px;
+    width: 500px;
+  }
+}

@@ -1,0 +1,94 @@
+.vityl-science {
+  background-color: rgba($color-mint, 0.75);
+  padding: 57px 0 33px;
+}
+
+.vityl-science__img {
+  position: relative;
+
+  img {
+    border-radius: 50%;
+  }
+}
+
+#vityl-science__lottie {
+  bottom: 35px;
+  height: 60px;
+  left: -16px;
+  position: absolute;
+  width: 60px;
+}
+
+.vityl-science__left-col {
+  padding-top: 16px;
+
+  .vityl-p {
+    margin-top: 12px;
+  }
+}
+
+.vityl-science__link {
+  margin-top: 33px;
+}
+
+@media(min-width: $breakpoint-mobile-start) {
+  .vityl-science {
+    padding: 215px 0;
+  }
+
+  .vityl-science__row {
+    align-items: center;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .vityl-science__left-col {
+    width: 550px;
+
+    .vityl-h2 {
+      margin-top: 33px;
+    }
+
+    .vityl-p {
+      margin-top: 20px;
+    }
+  }
+
+  .vityl-science__link {
+    margin-top: 35px;
+  }
+
+  .vityl-science__right-col {
+    display: flex;
+    justify-content: flex-end;
+    width: calc(100% - 550px);
+
+    .pre-title {
+      display: none;
+    }
+  }
+
+  #vityl-science__lottie {
+    bottom: 42px;
+    height: 105px;
+    left: -16px;
+    width: 105px;
+  }
+}
+
+@media(max-width: $breakpoint-mobile-start) {
+  .vityl-science__left-col {
+    .pre-title {
+      display: none;
+    }
+  }
+
+  .vityl-science__img {
+    margin: 20px auto 0;
+    max-width: 260px;
+  }
+
+  .vityl-science__link {
+    text-align: center;
+  }
+}

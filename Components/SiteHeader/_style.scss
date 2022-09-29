@@ -1,0 +1,253 @@
+.site-header {
+  backdrop-filter: blur(30px);
+  background: rgba(255, 253, 242, 0.7);
+  height: 130px;
+  left: 0;
+  padding: 39px 0;
+  position: fixed;
+  top: 0;
+  transition: background-color 0.2s ease-out;
+  width: 100%;
+  z-index: 9999;
+
+  &.is-open {
+    background-color: $color-eggshell;
+  }
+}
+
+.site-header__mobile-btn {
+  height: 23px;
+  position: absolute;
+  right: 0;
+  top: 13px;
+  width: 24px;
+
+  &.is-open {
+    span {
+      transform: translate3d(0, 10px, 0) rotate(45deg);
+
+      &::before {
+        opacity: 0;
+        transform: rotate(-45deg) translate3d(-5.71429px, -6px, 0);
+      }
+
+      &::after {
+        transform: translate3d(0, -20px, 0) rotate(-90deg);
+      }
+    }
+  }
+
+  span {
+    background-color: $color-rich-black;
+    height: 3px;
+    position: absolute;
+    top: 0;
+    transition-duration: 0.15s;
+    transition-property: transform;
+    transition-timing-function: ease;
+    width: 24px;
+
+    &::before {
+      background-color: $color-rich-black;
+      content: '';
+      height: 3px;
+      position: absolute;
+      top: 10px;
+      transition-duration: 0.15s;
+      transition-property: transform,opacity;
+      transition-timing-function: ease;
+      width: 24px;
+    }
+    
+    &::after {
+      background-color: $color-rich-black;
+      content: '';
+      height: 3px;
+      position: absolute;
+      top: 20px;
+      transition-duration: 0.15s;
+      transition-property: transform;
+      transition-timing-function: ease;
+      width: 24px;
+    }
+  }
+}
+
+.site-header-nav {
+  li+li {
+    margin: 26px 0 0;
+  }
+
+  a {
+    color: $color-rich-black;
+    display: inline-block;
+    font-size: 28px;
+    line-height: 1.64;
+    position: relative;
+
+    &:hover {
+      &::after {
+        width: 100%;
+      }
+    }
+
+    &::after {
+      background-color: $color-rich-black;
+      bottom: 0;
+      content: '';
+      height: 1px;
+      left: 0;
+      position: absolute;
+      transition: width 0.2s ease-out;
+      width: 0;
+    }
+  }
+
+  .current-menu-item,
+  .current_page_item {
+    a {
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.site-header-social__row {
+  align-items: center;
+  display: flex;
+  margin-top: 75px;
+}
+
+.site-header-social__col + .site-header-social__col {
+  margin-left: 18px;
+}
+
+.site-header-buttons {
+  margin: 41px 0 0;
+
+  li+li {
+    margin: 16px 0 0;
+  }
+}
+
+@media(max-width: $breakpoint-mobile-start) {
+  .site-header__row {
+    position: relative;
+  }
+
+  .site-header-logo {
+    width: 105px;
+
+    svg {
+      height: auto;
+      width: 100%;
+    }
+  }
+
+  .site-header-menu {
+    background-color: $color-eggshell;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    overflow-y: auto;
+    padding: 18px 40px 51px;
+    position: fixed;
+    right: 0;
+    top: 130px;
+    transition: opacity 0.2s ease-out, visibility 0.2s ease-out;
+    visibility: hidden;
+
+    &.is-open {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+@media(min-width: $breakpoint-mobile-start) {
+  .site-header {
+    height: 145px;
+  }
+
+  .site-header__mobile-btn {
+    display: none;
+  }
+
+  .site-header__row {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .site-header-menu {
+    align-items: center;
+    display: flex;
+    padding-bottom: 5px;
+  }
+
+  .site-header-nav {
+    ul {
+      display: flex;
+    }
+
+    li+li {
+      margin: 0 0 0 20px;
+    }
+
+    a {
+      font-size: 18px;
+      line-height: 1.33333;
+
+      &::after {
+        background-color: $color-rich-black;
+        bottom: 0;
+        content: '';
+        height: 1px;
+        left: 0;
+        position: absolute;
+        transition: width 0.2s ease-out;
+        width: 0;
+      }
+    }
+  }
+
+  .site-header-buttons {
+    margin: 0 0 0 34px;
+      
+    ul {
+      display: flex;
+    }
+
+    li+li {
+      margin: 0 0 0 16px;
+    }
+  }
+
+  .site-header-social__row {
+    display: none;
+  }
+
+  .site-header-buttons {
+    margin: 0 0 0 16px;
+  }
+}
+
+@media(min-width: 1180px) {
+  .site-header-nav {
+    li + li {
+      margin: 0 0 0 41px;
+    }
+  }
+
+  .site-header-buttons {
+    margin: 0 0 0 34px;
+  }
+}
+
+@media(min-width: $breakpoint-mobile-start) and (max-width: 1180px) {
+  .site-header-buttons {
+    .btn {
+      font-size: 14px;
+    }
+  }
+}

@@ -1,0 +1,172 @@
+.vityl-testimonial {
+  background-color: $color-eggshell;
+  overflow: hidden;
+
+  .container {
+    padding-bottom: 52px;
+    padding-top: 69px;
+    position: relative;
+
+    &::before {
+      background-color: rgba($color-coral, 0.12);
+      border-radius: 50%;
+      content: '';
+      height: 540px;
+      left: -270px;
+      position: absolute;
+      top: -270px;
+      width: 540px;
+    }
+
+    &::after {
+      background-color: rgba($color-coral, 0.12);
+      border-radius: 50%;
+      bottom: -270px;
+      content: '';
+      height: 540px;
+      position: absolute;
+      right: -270px;
+      width: 540px;
+    }
+  }
+}
+
+.vityl-testimonial__content-col {
+  font-size: 16px;
+  letter-spacing: 0.05em;
+  line-height: 1.5;
+}
+
+@media(min-width: $breakpoint-mobile-start) {
+  .vityl-testimonial {
+    .container {
+      padding-bottom: 198px;
+      padding-top: 198px;
+
+      &::before {
+        bottom: 0;
+        height: 1400px;
+        left: -800px;
+        top: auto;
+        width: 1400px;
+      }
+
+      &::after {
+        bottom: auto;
+        height: 1400px;
+        right: -800px;
+        top: 0;
+        width: 1400px;
+      }
+    }
+  }
+
+  .vityl-testimonial__row {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 800px;
+  }
+
+  .vityl-testimonial__image-col {
+    position: relative;
+    width: 240px;
+
+    &::before {
+      background-color: $color-coral;
+      border-radius: 33px 33px 0 0;
+      content: '';
+      height: 33px;
+      left: -55px;
+      position: absolute;
+      top: -7px;
+      width: 65px;
+    }
+
+    &::after {
+      background-color: $color-teal;
+      border-radius: 33px 33px 0 0;
+      content: '';
+      height: 33px;
+      left: -38px;
+      position: absolute;
+      top: 46px;
+      transform: rotate(-141.85deg);
+      width: 65px;
+    }
+
+    img {
+      border-radius: 50%;
+    }
+  }
+
+  .vityl-testimonial__content-col {
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: 1.78;
+    width: 500px;
+  }
+
+  .vityl-testimonial__info {
+    margin-top: 32px;
+  }
+
+  .vityl-testimonial__info-left {
+    display: none;
+  }
+}
+
+@media(max-width: $breakpoint-mobile-start) {
+  .vityl-testimonial__image-col {
+    display: none;
+  }
+
+  .vityl-testimonial__info {
+    align-items: center;
+    display: flex;
+    margin-top: 56px;
+  }
+
+  .vityl-testimonial__info-left {
+    padding-left: 20px;
+    position: relative;
+    width: 105px;
+
+    &::before {
+      background-color: $color-coral;
+      border-radius: 16px 16px 0 0;
+      content: '';
+      height: 16px;
+      left: 4px;
+      position: absolute;
+      top: -6px;
+      width: 31px;
+    }
+
+    &::after {
+      background-color: $color-teal;
+      border-radius: 16px 16px 0 0;
+      content: '';
+      height: 16px;
+      left: 4px;
+      position: absolute;
+      top: 4px;
+      transform: rotate(-141.85deg);
+      width: 31px;
+    }
+
+    img {
+      border-radius: 50%;
+    }
+  }
+
+  .vityl-testimonial__info-right {
+    padding-left: 30px;
+    width: calc(100% - 105px);
+
+    span {
+      display: none;
+    }
+  }
+}

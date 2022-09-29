@@ -1,0 +1,40 @@
+.vityl-belonging-resource {
+  background-color: $color-eggshell;
+  padding: 67px 0 66px;
+}
+
+.vityl-belonging-resource__link {
+  margin-top: 80px;
+  text-align: center;
+}
+
+.vityl-belonging-resource__row {
+  margin-top: 30px;
+}
+
+@media(min-width: $breakpoint-mobile-start) {
+  .vityl-belonging-resource {
+    padding: 152px 0 90px;
+  }
+
+  .vityl-belonging-resource__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px -35px 0;
+  }
+
+  .vityl-belonging-resource__col {
+    padding: 50px 35px;
+    width: 33.33333%;
+  }
+
+  .vityl-belonging-resource__link {
+    margin-top: 35px;
+  }
+}
+
+@media(max-width: $breakpoint-mobile-start) {
+  .vityl-belonging-resource__col+.vityl-belonging-resource__col {
+    margin-top: 43px;
+  }
+}

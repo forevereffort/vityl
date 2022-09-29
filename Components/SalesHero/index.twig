@@ -1,0 +1,40 @@
+<section class="vityl-sales-hero">
+    <div class="container">
+        <div class="vityl-sales-hero__row">
+            <div class="vityl-sales-hero__left">
+                <div class="vityl-sales-hero__content">
+                    <h1>{{ title }}</h1>
+                    <div class="vityl-p">
+                        {{ content|apply_filters('the_content') }}
+                    </div>
+                </div>
+                <div class="vityl-sales-hero__video-btn">
+                    <img
+                        class="lazyload"
+                        src="{{ placeholderImage(530, 300) }}"
+                        data-src="{{ play_button_image.src|resizeDynamic(530, 300) }}"
+                        data-srcset="{{ play_button_image.src|resizeDynamic(530, 300) }} 1x, {{ play_button_image.src|resizeDynamic(1060, 600) }} 2x"
+                        data-sizes="auto"
+                        alt="{{ play_button_image.alt|e }}"
+                    />
+                    <span>{{ play_button_title }}</span>
+                </div>
+            </div>
+            <div class="vityl-sales-hero__right">
+                <h2>{{ form_title }}</h2>
+                <div class="vityl-sales-hero__form">
+                    {{ gravity_form_shortcode|shortcodes }}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div id="js-vityl-sales-hero-popup-wrapper" class="hide">
+    <div id="js-vityl-sales-hero-popup__close-btn">
+        <span></span>
+    </div>
+    <div class="vityl-sales-hero-popup-container">
+        <div class="vityl-video-loader"></div>
+        {{ video }}
+    </div>
+</div>

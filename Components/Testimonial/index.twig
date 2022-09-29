@@ -1,0 +1,34 @@
+<section class="vityl-testimonial">
+    <div class="container">
+        <div class="vityl-testimonial__row">
+            <div class="vityl-testimonial__content-col">
+                <div class="vityl-testimonial__content">{{ content }}</div>
+                <div class="vityl-testimonial__info">
+                    <div class="vityl-testimonial__info-left">
+                        <img
+                            class="lazyload"
+                            src="{{ placeholderImage(240, 240) }}"
+                            data-src="{{ image.src|resizeDynamic(240, 240) }}"
+                            data-srcset="{{ image.src|resizeDynamic(240, 240) }} 1x, {{ image.src|resizeDynamic(480, 480) }} 2x"
+                            data-sizes="auto"
+                            alt="{{ image.alt|e }}"
+                        />
+                    </div>
+                    <div class="vityl-testimonial__info-right">
+                        <strong>{{ name }}</strong> <span>-</span> {{ company }}
+                    </div>
+                </div>
+            </div>
+            <div class="vityl-testimonial__image-col">
+                <img
+                    class="lazyload"
+                    src="{{ placeholderImage(240, 240) }}"
+                    data-src="{{ image.src|resizeDynamic(240, 240) }}"
+                    data-srcset="{{ image.src|resizeDynamic(240, 240) }} 1x, {{ image.src|resizeDynamic(480, 480) }} 2x"
+                    data-sizes="auto"
+                    alt="{{ image.alt|e }}"
+                />
+            </div>
+        </div>
+    </div>
+</section>
