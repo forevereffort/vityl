@@ -3,6 +3,7 @@
 namespace Flynt\Components\SiteFooter;
 
 use Timber;
+use Timber\Menu;
 use Flynt\Utils\Options;
 
 add_action('init', function () {
@@ -13,8 +14,8 @@ add_action('init', function () {
 });
 
 add_filter('Flynt/addComponentData?name=SiteFooter', function ($data) {
-    $data['footer_menu_1'] = new Timber\Menu('footer_menu_1');
-    $data['footer_menu_2'] = new Timber\Menu('footer_menu_2');
+    $data['footer_menu_1'] = new Menu('footer_menu_1');
+    $data['footer_menu_2'] = new Menu('footer_menu_2');
 
     $data['title'] = Options::getGlobal('Footer Settings', 'title');
     $data['content'] = Options::getGlobal('Footer Settings', 'content');
