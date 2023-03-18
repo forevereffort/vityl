@@ -3,6 +3,7 @@
 namespace Flynt\Components\SiteHeader;
 
 use Timber;
+use Timber\Menu;
 use Flynt\Utils\Options;
 
 add_action('init', function () {
@@ -12,7 +13,7 @@ add_action('init', function () {
 });
 
 add_filter('Flynt/addComponentData?name=SiteHeader', function ($data) {
-    $data['header_menu'] = new Timber\Menu('header_menu');
+    $data['header_menu'] = new Menu('header_menu');
 
     $data['waitlist_title'] = Options::getGlobal('Global Settings', 'title');
     $data['waitlist_gravity_form_shortcode'] = Options::getGlobal('Global Settings', 'gravity_form_shortcode');
